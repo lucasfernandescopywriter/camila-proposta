@@ -56,3 +56,4 @@ camila-proposta/
 - **Estrategista Comercial:** Lucas Fernandes
 - **WhatsApp Direto:** [(11) 95762-2191](https://wa.me/5511957622191)
 - **Localização:** Araraquara / São Paulo - SP
+
