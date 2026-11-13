@@ -1,0 +1,3334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila Moraes · Motor Imobiliário de Alta Conversão — Keynote Presentation</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       DESIGN SYSTEM: macOS SONOMA KEYNOTE + BUSINESS PROPOSAL
+       - Barra Superior macOS translucida com icone Apple SVG
+       - Relógio no formato 24 horas (HH:mm)
+       - Janela Keynote com botoes semaforo nativos
+       - Fundo Desktop macOS com gradiente suave original
+       - Dock flutuante inferior macOS nativo
+       - Zero Emojis em toda a apresentação
+       - Sem disclaimer/pill empilhado em cima das headlines
+       - Sem CRECI e sem contador de página no cabeçalho do topo
+       - Slide 04: Funil de Vendas Visual Único e Direto
+       - Slide 05: Contraste Financeiro do Custo da Inação
+       - Slide 06: Mapa mental expansivo/retratil com linhas dinamicas SVG
+       - Slide 08: WhatsApp interativo com scroll funcional e 3 conversas reais
+       - Slide 09: Canva vs Stacks de Valor da Nova Landing Page
+       - Slide 10: Future Pacing em Bullets Minimalistas e Sofisticados
+       - Slide 11: Stack de Entregáveis isolada SEM PREÇO e sem disclaimer
+       - Slide 12: O Pacto com Checkboxes Desmarcados, Dock Bloqueado e CTA Black
+       - Slide 13: Revelação do Preço e Condição Especial Facilitada
+       - Slide 14: Visualizador de PDF com a Proposta Comercial Completa
+    ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-desktop: #E5E8EC;
+      --window-bg: #FFFFFF;
+      --menubar-bg: rgba(255, 255, 255, 0.75);
+      --dock-bg: rgba(255, 255, 255, 0.65);
+      --ink-dark: #0B0F19;
+      --ink-primary: #1E293B;
+      --ink-secondary: #475569;
+      --ink-muted: #94A3B8;
+      --border-light: #E2E8F0;
+      --gold-accent: #B45309;
+      --gold-luxury: #C5A059;
+      --accent-yellow: #FACC15;
+      --accent-emerald: #10B981;
+      --accent-emerald-soft: #ECFDF5;
+      --accent-emerald-border: #A7F3D0;
+      --accent-emerald-text: #065F46;
+      --danger: #EF4444;
+      --danger-soft: #FEF2F2;
+      --radius-window: 16px;
+      --radius-card: 12px;
+      --radius-sm: 8px;
+      --radius-pill: 9999px;
+      --shadow-window: 0 35px 90px -15px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.08);
+      --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.04);
+      --shadow-card-hover: 0 10px 24px -4px rgba(0, 0, 0, 0.08);
+      --shadow-dock: 0 16px 40px -8px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Plus Jakarta Sans", sans-serif;
+      background: linear-gradient(135deg, #DFE3E8 0%, #E9ECEF 50%, #D8DCE2 100%);
+      color: var(--ink-primary);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* 1. TOP macOS MENU BAR */
+    .mac-menubar {
+      height: 30px;
+      background: var(--menubar-bg);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 18px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink-dark);
+      z-index: 100;
+    }
+
+    .mac-menubar-left, .mac-menubar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mac-apple-logo-svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .mac-menu-item {
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: background 0.15s ease;
+    }
+
+    .mac-menu-item:hover {
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .mac-menu-item.active {
+      font-weight: 700;
+    }
+
+    /* 2. macOS WINDOW CONTAINER */
+    .mac-desktop-area {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem 5.5rem;
+      position: relative;
+    }
+
+    .mac-window {
+      background: var(--window-bg);
+      border-radius: var(--radius-window);
+      box-shadow: var(--shadow-window);
+      width: 100%;
+      max-width: 1260px;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    /* Window Header / Titlebar */
+    .mac-titlebar {
+      height: 42px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .mac-traffic-lights {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .traffic-light {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 0.5px solid rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+    }
+
+    .light-close { background: #FF5F56; }
+    .light-minimize { background: #FFBD2E; }
+    .light-expand { background: #27C93F; }
+
+    .mac-titlebar-title {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    /* Slides Viewport */
+    .mac-window-body {
+      flex: 1;
+      padding: 2.2rem 3.5rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      background: #FFFFFF;
+      overflow-y: auto;
+    }
+
+    .deck-slide {
+      display: none;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.22s ease, transform 0.22s ease;
+    }
+
+    .deck-slide.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* 3. BUSINESS PROPOSAL EDITORIAL HEADINGS */
+    .proposal-h1 {
+      font-size: clamp(2rem, 3.2vw, 2.9rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.035em;
+      color: var(--ink-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .proposal-h2 {
+      font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      color: var(--ink-dark);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .proposal-desc {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--ink-secondary);
+      max-width: 860px;
+      margin-bottom: 1.75rem;
+      font-weight: 400;
+    }
+
+    /* GRIDS & CARDS */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; align-items: stretch; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.15rem; }
+
+    .card-clean {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.35rem;
+      transition: all 0.2s ease;
+      box-shadow: var(--shadow-card);
+    }
+
+    .card-clean:hover {
+      border-color: #94A3B8;
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .card-clean--active {
+      border-color: #0F172A;
+      background: #F8FAFC;
+    }
+
+    .card-clean--dark {
+      background: var(--ink-dark);
+      color: #FFFFFF;
+      border-color: var(--ink-dark);
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 0.35rem;
+      text-transform: uppercase;
+    }
+
+    .card-clean--dark .card-title { color: #FFFFFF; }
+
+    .card-desc {
+      font-size: 0.83rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       SLIDE 04: FUNIL DE VENDAS VISUAL DIRETO (SEM ABAS)
+    ============================================================ */
+    .funnel-flow-container {
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    }
+
+    .funnel-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+
+    .funnel-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: relative;
+    }
+
+    .funnel-card.highlight {
+      border-color: #0F172A;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+    }
+
+    .funnel-badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #64748B;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .funnel-card-title {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      line-height: 1.25;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .funnel-card-desc {
+      font-size: 0.76rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+    }
+
+    .funnel-card-items {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-light);
+      font-size: 0.72rem;
+      color: var(--ink-primary);
+      line-height: 1.5;
+    }
+
+    .funnel-arrow {
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      color: #0F172A;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    /* ============================================================
+       SLIDE 06: MIND MAP TEMA CLARO NATIVO (macOS Keynote)
+    ============================================================ */
+    .mindmap-light-container {
+      background: #F8FAFC;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-light);
+      padding: 1.25rem 1.5rem;
+      position: relative;
+      overflow-x: auto;
+      min-height: 380px;
+      background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+
+    .mindmap-toolbar-light {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 0.65rem;
+    }
+
+    .mindmap-title-light {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0F172A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mindmap-btn-group-light {
+      display: flex;
+      gap: 8px;
+    }
+
+    .mindmap-tool-btn-light {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      color: var(--ink-secondary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .mindmap-tool-btn-light:hover {
+      background: var(--ink-dark);
+      color: #FFFFFF;
+      border-color: var(--ink-dark);
+    }
+
+    .mindmap-canvas-light {
+      display: flex;
+      align-items: center;
+      gap: 3.5rem;
+      position: relative;
+      padding: 1rem 0;
+    }
+
+    .mm-svg-canvas-light {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .mm-root-node-light {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      border: 2px solid #0F172A;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-card);
+      width: 210px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 10;
+      color: #FFFFFF;
+    }
+
+    .mm-root-tag-light {
+      font-size: 0.62rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #94A3B8;
+      margin-bottom: 4px;
+    }
+
+    .mm-root-title-light {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      line-height: 1.2;
+    }
+
+    .mm-branches-col-light {
+      display: flex;
+      flex-direction: column;
+      gap: 1.15rem;
+      position: relative;
+      z-index: 10;
+      flex: 1;
+    }
+
+    .mm-branch-row-light {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .mm-pillar-node-light {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-width: 240px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .mm-pillar-node-light:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: #94A3B8;
+    }
+
+    .mm-pillar-node-light.expanded {
+      border-color: #0F172A;
+      background: #FFFFFF;
+    }
+
+    .mm-pillar-blue-light { border-left: 4px solid #0284C7; }
+    .mm-pillar-teal-light { border-left: 4px solid #10B981; }
+    .mm-pillar-purple-light { border-left: 4px solid #8B5CF6; }
+
+    .mm-pillar-text-light {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      text-transform: uppercase;
+    }
+
+    .mm-toggle-badge-light {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #F1F5F9;
+      color: var(--ink-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 800;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .mm-pillar-node-light.expanded .mm-toggle-badge-light {
+      transform: rotate(45deg);
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+
+    .mm-children-col-light {
+      display: none;
+      flex-direction: column;
+      gap: 0.55rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    .mm-children-col-light.open {
+      display: flex;
+    }
+
+    .mm-leaf-node-light {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-left: 3px solid #0284C7;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--ink-dark);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+      white-space: nowrap;
+    }
+
+    .mm-leaf-node-light span {
+      font-weight: 500;
+      color: var(--ink-secondary);
+      margin-left: 4px;
+    }
+
+    /* ============================================================
+       SLIDE 08: WHATSAPP DESKTOP INTERATIVO COM SCROLL LIVRE
+    ============================================================ */
+    .mac-whatsapp-window {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      height: 420px;
+      box-shadow: var(--shadow-window);
+      user-select: text;
+    }
+
+    .wa-sidebar {
+      background: #F8F9FA;
+      border-right: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .wa-sidebar-header {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--ink-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFFFFF;
+    }
+
+    .wa-chat-item {
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #F1F3F5;
+      background: #FFFFFF;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+
+    .wa-chat-item:hover { background: #F1F5F9; }
+
+    .wa-chat-item.active {
+      background: #EFF6FF;
+      border-left: 3px solid #0F172A;
+    }
+
+    .wa-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.78rem;
+      flex-shrink: 0;
+    }
+
+    .wa-chat-meta {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .wa-chat-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .wa-chat-snippet {
+      font-size: 0.72rem;
+      color: var(--ink-secondary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+
+    .wa-main-chat {
+      background: #EFEAE2;
+      background-image: radial-gradient(rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 16px 16px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 0;
+      position: relative;
+    }
+
+    .wa-chat-header {
+      background: #F0F2F5;
+      padding: 10px 16px;
+      border-bottom: 1px solid #D1D7DB;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .wa-scroll-hint {
+      background: rgba(15, 23, 42, 0.85);
+      color: #FFFFFF;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .wa-messages-container {
+      flex: 1;
+      min-height: 0;
+      padding: 16px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+    }
+
+    .wa-messages-container::-webkit-scrollbar { width: 8px; }
+    .wa-messages-container::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.05); }
+    .wa-messages-container::-webkit-scrollbar-thumb {
+      background: rgba(15, 23, 42, 0.35);
+      border-radius: 4px;
+    }
+    .wa-messages-container::-webkit-scrollbar-thumb:hover { background: rgba(15, 23, 42, 0.55); }
+
+    .wa-msg {
+      padding: 7px 11px;
+      border-radius: 8px;
+      font-size: 0.81rem;
+      line-height: 1.42;
+      max-width: 76%;
+      position: relative;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+      word-wrap: break-word;
+    }
+
+    .wa-msg--client {
+      align-self: flex-start;
+      background: #FFFFFF;
+      color: #111B21;
+      border-top-left-radius: 2px;
+    }
+
+    .wa-msg--camila {
+      align-self: flex-end;
+      background: #D9FDD3;
+      color: #111B21;
+      border-top-right-radius: 2px;
+    }
+
+    .wa-msg-meta {
+      font-size: 0.62rem;
+      color: #667781;
+      text-align: right;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 4px;
+    }
+
+    .wa-check-svg {
+      width: 12px;
+      height: 12px;
+      fill: none;
+      stroke: #53BDEB;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ============================================================
+       SLIDE 09: STACKS DE VALOR DA LANDING PAGE
+    ============================================================ */
+    .stack-value-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+    }
+
+    .stack-value-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #0F172A;
+      background: #E2E8F0;
+      padding: 3px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .stack-value-title {
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 2px;
+    }
+
+    .stack-value-desc {
+      font-size: 0.74rem;
+      color: var(--ink-secondary);
+      line-height: 1.4;
+    }
+
+    /* ============================================================
+       SLIDE 10: FUTURE PACING MINIMALISTA & SOFISTICADO
+    ============================================================ */
+    .fp-minimal-list {
+      display: flex;
+      flex-direction: column;
+      max-width: 900px;
+    }
+
+    .fp-minimal-item {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .fp-minimal-item:last-child {
+      border-bottom: none;
+    }
+
+    .fp-minimal-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #0F172A;
+      flex-shrink: 0;
+      transform: translateY(-2px);
+    }
+
+    .fp-minimal-text {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: var(--ink-secondary);
+    }
+
+    .fp-minimal-text strong {
+      color: var(--ink-dark);
+      font-weight: 700;
+    }
+
+    /* ============================================================
+       SLIDE 12: O PACTO DE COMPROMETIMENTO
+    ============================================================ */
+    .pact-box {
+      background: #F8FAFC;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .pact-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: left;
+    }
+
+    .pact-item:hover {
+      border-color: #94A3B8;
+    }
+
+    .pact-item.checked {
+      border-color: #0F172A;
+      background: #F1F5F9;
+    }
+
+    .pact-checkbox {
+      width: 22px;
+      height: 22px;
+      border-radius: 6px;
+      border: 2px solid #CBD5E1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: all 0.15s ease;
+      background: #FFFFFF;
+    }
+
+    .pact-item.checked .pact-checkbox {
+      background: #0F172A;
+      border-color: #0F172A;
+    }
+
+    .pact-checkbox-check {
+      display: none;
+      width: 12px;
+      height: 12px;
+      stroke: #FFFFFF;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .pact-item.checked .pact-checkbox-check {
+      display: block;
+    }
+
+    .pact-content-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 2px;
+    }
+
+    .pact-content-desc {
+      font-size: 0.78rem;
+      color: var(--ink-secondary);
+      line-height: 1.45;
+    }
+
+    .pact-btn-unlock {
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .pact-btn-unlock.active {
+      background: #0F172A;
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.35);
+      cursor: pointer;
+    }
+
+    .pact-btn-unlock.locked {
+      background: #E2E8F0;
+      color: #94A3B8;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+
+    .thankyou-card {
+      display: none;
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       SLIDE 14: DOCUMENTO OFICIAL DA PROPOSTA COMERCIAL (ALTO CONTRASTE)
+    ============================================================ */
+    .doc-preview-wrapper {
+      background: #F1F5F9;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1.25rem;
+      max-height: 480px;
+      overflow-y: auto;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .doc-sheet {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 2.2rem 2.5rem;
+      color: #0F172A;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      max-width: 860px;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .doc-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #0F172A;
+      padding-bottom: 0.85rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .doc-brand-title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #0F172A;
+      letter-spacing: -0.02em;
+    }
+
+    .doc-meta-box {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.68rem;
+      color: #475569;
+      text-align: right;
+      line-height: 1.45;
+    }
+
+    .doc-section-h3 {
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #0F172A;
+      margin: 1.15rem 0 0.5rem;
+      padding-bottom: 3px;
+      border-bottom: 1.5px solid #E2E8F0;
+    }
+
+    .doc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .doc-list li {
+      padding: 3px 0;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      color: #334155;
+      font-size: 0.77rem;
+      line-height: 1.5;
+    }
+
+    .doc-list li::before {
+      content: "-";
+      color: #0F172A;
+      font-weight: 800;
+    }
+
+    .doc-pricing-table {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 0.85rem 0 1rem;
+    }
+
+    .doc-pricing-col {
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+
+    .doc-pricing-col.active-plan {
+      border-color: #0F172A;
+      background: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    }
+
+    .doc-signature-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1.5px solid #E2E8F0;
+    }
+
+    /* 4. BOTTOM macOS DOCK */
+    .mac-dock-container {
+      position: fixed;
+      bottom: 12px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .mac-dock {
+      pointer-events: auto;
+      height: 52px;
+      background: var(--dock-bg);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      box-shadow: var(--shadow-dock);
+      border-radius: 20px;
+      padding: 0 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .dock-btn {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 8px 14px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--ink-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .dock-btn:hover:not(:disabled) {
+      background: #FFFFFF;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .dock-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .dock-btn-primary {
+      background: #0F172A;
+      color: #FFFFFF;
+      border-color: #0F172A;
+    }
+
+    .dock-btn-primary:hover:not(:disabled) {
+      background: #1E293B;
+      color: #FFFFFF;
+    }
+
+    .dock-sep {
+      width: 1px;
+      height: 24px;
+      background: rgba(0, 0, 0, 0.15);
+    }
+
+    .dock-slide-indicator {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--ink-dark);
+      padding: 4px 10px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 8px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .icon-svg {
+      width: 14px;
+      height: 14px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  
+    /* ============================================================
+       RESPONSIVE DESIGN SYSTEM: TABLET & MOBILE (TODAS AS TELAS & ELEMENTOS)
+    ============================================================ */
+    @media (max-width: 1024px) {
+      .mac-desktop-area {
+        padding: 0.75rem 1rem 5.5rem;
+      }
+      .mac-window-body {
+        padding: 1.75rem 2rem 2.2rem;
+      }
+      .funnel-grid-4 {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+      }
+      .funnel-arrow {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      /* 1. Global Shell & macOS Sonoma Window */
+      body {
+        overflow-x: hidden;
+      }
+
+      .mac-menubar {
+        padding: 0 12px;
+      }
+
+      .mac-menubar-left .mac-menu-item:not(.active) {
+        display: none;
+      }
+
+      .mac-desktop-area {
+        padding: 0.35rem 0.35rem 4.8rem;
+        align-items: flex-start;
+      }
+
+      .mac-window {
+        border-radius: 12px;
+        min-height: auto;
+        max-width: 100%;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .mac-titlebar {
+        height: 38px;
+        padding: 0 12px;
+      }
+
+      .mac-titlebar-title {
+        font-size: 0.72rem;
+        max-width: 58%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .mac-window-body {
+        padding: 1.25rem 0.95rem 1.85rem;
+        max-height: none;
+      }
+
+      /* 2. Headings & Editorial Typography */
+      .proposal-h1 {
+        font-size: 1.45rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 0.45rem !important;
+      }
+
+      .proposal-h2 {
+        font-size: 1.25rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 0.45rem !important;
+      }
+
+      .proposal-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.48 !important;
+        margin-bottom: 1.15rem !important;
+      }
+
+      /* 3. Universal Grids to 1 Column */
+      .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+      }
+
+      .card-clean {
+        padding: 1rem !important;
+      }
+
+      .card-title {
+        font-size: 0.88rem !important;
+      }
+
+      .card-desc {
+        font-size: 0.78rem !important;
+      }
+
+      /* 4. Slide 04: Funil de Vendas */
+      .funnel-flow-container {
+        padding: 1rem 0.85rem;
+      }
+
+      .funnel-grid-4 {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+      }
+
+      .funnel-arrow {
+        top: auto !important;
+        bottom: -15px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) rotate(90deg) !important;
+        width: 20px !important;
+        height: 20px !important;
+        display: flex !important;
+      }
+
+      .funnel-card:last-child .funnel-arrow {
+        display: none !important;
+      }
+
+      /* 5. Slide 06: Mapa Mental Responsivo */
+      .mindmap-light-container {
+        padding: 1rem 0.75rem;
+        min-height: 340px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .mindmap-toolbar-light {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-bottom: 0.5rem;
+      }
+
+      .mindmap-canvas-light {
+        min-width: 620px;
+        padding: 0.5rem 0;
+      }
+
+      /* 6. Slide 08: WhatsApp Interativo Mobile-First */
+      .mac-whatsapp-window {
+        display: flex !important;
+        flex-direction: column !important;
+        height: 480px !important;
+      }
+
+      .wa-sidebar {
+        flex-direction: row !important;
+        overflow-x: auto !important;
+        flex-shrink: 0 !important;
+        border-right: none !important;
+        border-bottom: 1px solid var(--border-light) !important;
+        padding: 6px !important;
+        gap: 6px !important;
+        background: #F1F3F5 !important;
+        height: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .wa-sidebar-header {
+        display: none !important;
+      }
+
+      .wa-chat-item {
+        padding: 6px 10px !important;
+        border-radius: 8px !important;
+        border: 1px solid var(--border-light) !important;
+        flex-shrink: 0 !important;
+        min-width: 135px !important;
+        gap: 8px !important;
+      }
+
+      .wa-avatar {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 0.7rem !important;
+      }
+
+      .wa-chat-name {
+        font-size: 0.75rem !important;
+      }
+
+      .wa-chat-snippet {
+        display: none !important;
+      }
+
+      .wa-chat-header {
+        padding: 8px 12px !important;
+      }
+
+      #waHeaderName {
+        font-size: 0.78rem !important;
+      }
+
+      .wa-scroll-hint span {
+        display: none;
+      }
+
+      .wa-messages-container {
+        padding: 10px 12px 20px !important;
+      }
+
+      .wa-msg {
+        max-width: 88% !important;
+        font-size: 0.76rem !important;
+        padding: 6px 9px !important;
+      }
+
+      /* 7. Slide 09: Canva vs Stacks */
+      [data-slide="9"] img {
+        width: 85px !important;
+        height: 125px !important;
+      }
+
+      .stack-value-row {
+        padding: 8px 10px !important;
+        gap: 8px !important;
+      }
+
+      .stack-value-title {
+        font-size: 0.78rem !important;
+      }
+
+      .stack-value-desc {
+        font-size: 0.7rem !important;
+      }
+
+      /* 8. Slide 10: Future Pacing Minimalista */
+      .fp-minimal-item {
+        padding: 10px 0 !important;
+        gap: 10px !important;
+      }
+
+      .fp-minimal-text {
+        font-size: 0.8rem !important;
+        line-height: 1.45 !important;
+      }
+
+      /* 9. Slide 12: O Pacto */
+      .pact-box {
+        padding: 1rem 0.85rem !important;
+      }
+
+      .pact-item {
+        padding: 10px !important;
+        gap: 10px !important;
+      }
+
+      .pact-content-title {
+        font-size: 0.82rem !important;
+      }
+
+      .pact-content-desc {
+        font-size: 0.72rem !important;
+      }
+
+      .pact-btn-unlock {
+        font-size: 0.78rem !important;
+        padding: 12px 14px !important;
+        line-height: 1.35 !important;
+      }
+
+      /* 10. Slide 13: Preço e Condições */
+      [data-slide="13"] .proposal-h1 {
+        font-size: 1.35rem !important;
+      }
+
+      [data-slide="13"] div[style*="max-width: 640px"] {
+        padding: 1.25rem 1rem !important;
+      }
+
+      [data-slide="13"] div[style*="font-size: 2.5rem"] {
+        font-size: 1.85rem !important;
+      }
+
+      /* 11. Slide 14: Documento Oficial Timbrado */
+      .doc-preview-wrapper {
+        padding: 0.4rem !important;
+        max-height: 480px !important;
+      }
+
+      .doc-sheet {
+        padding: 1.25rem 0.95rem !important;
+        font-size: 0.74rem !important;
+      }
+
+      .doc-header-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+      }
+
+      .doc-brand-title {
+        font-size: 0.9rem !important;
+      }
+
+      .doc-meta-box {
+        text-align: left !important;
+        font-size: 0.65rem !important;
+      }
+
+      .doc-pricing-table {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .doc-pricing-col {
+        padding: 10px 12px !important;
+      }
+
+      div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .doc-signature-row {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+        text-align: center !important;
+      }
+
+      .doc-signature-row a {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 14px !important;
+        font-size: 0.78rem !important;
+      }
+
+      /* 12. Bottom Dock Flutuante */
+      .mac-dock-container {
+        bottom: 8px;
+        padding: 0 8px;
+      }
+
+      .mac-dock {
+        height: 44px;
+        padding: 0 10px;
+        gap: 6px;
+        border-radius: 14px;
+      }
+
+      .dock-btn {
+        padding: 6px 10px;
+        font-size: 0.72rem;
+        border-radius: 8px;
+      }
+
+      .dock-slide-indicator {
+        font-size: 0.72rem;
+        padding: 3px 6px;
+      }
+
+      .dock-sep {
+        height: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .mac-desktop-area {
+        padding: 0.2rem 0.2rem 4.4rem;
+      }
+      .mac-window-body {
+        padding: 1rem 0.75rem 1.5rem;
+      }
+      .proposal-h1 {
+        font-size: 1.25rem !important;
+      }
+      .proposal-h2 {
+        font-size: 1.1rem !important;
+      }
+      .pact-item {
+        flex-direction: column;
+        gap: 6px;
+      }
+    }
+  
+    /* ESTILOS TABELARES PARA O DOCUMENTO OFICIAL (SLIDE 14) */
+    .doc-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.65rem 0 1.15rem;
+      font-size: 0.76rem;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 6px;
+    }
+
+    .doc-table th {
+      background: #F8FAFC;
+      color: #0F172A;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.67rem;
+      letter-spacing: 0.05em;
+      padding: 8px 12px;
+      border: 1px solid #E2E8F0;
+      text-align: left;
+    }
+
+    .doc-table td {
+      padding: 9px 12px;
+      border: 1px solid #E2E8F0;
+      color: #334155;
+      line-height: 1.5;
+      vertical-align: top;
+    }
+
+    .doc-table tr:nth-child(even) {
+      background: #FAFCFE;
+    }
+
+    .doc-table tr.highlight-row {
+      background: #F0FDF4;
+    }
+
+    .doc-table tr.highlight-row td {
+      border-color: #BBF7D0;
+    }
+
+    .badge-recommended {
+      display: inline-block;
+      background: #10B981;
+      color: #FFFFFF;
+      font-size: 0.62rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .doc-meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.15rem;
+      border: 1.5px solid #0F172A;
+      background: #FFFFFF;
+    }
+
+    .doc-meta-table td {
+      padding: 10px 14px;
+      border: 1px solid #E2E8F0;
+      vertical-align: top;
+      font-size: 0.74rem;
+      line-height: 1.5;
+    }
+
+  
+    /* ============================================================
+       NOVOS ESTILOS PARA INTEGRAÇÃO DA COPY DO PASSO 6
+    ============================================================ */
+    .diagnostic-box {
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-left: 4px solid #0F172A;
+      border-radius: var(--radius-card);
+      padding: 1.1rem 1.4rem;
+      margin-bottom: 1.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .false-promise-box {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-radius: var(--radius-card);
+      padding: 0.9rem 1.25rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .story-callout-box {
+      background: #FAF9F6;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #B45309;
+      border-radius: var(--radius-card);
+      padding: 0.95rem 1.3rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .model-contrast-bar {
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 8px 14px;
+      font-size: 0.76rem;
+      color: var(--ink-secondary);
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .roi-equation-box {
+      background: #F8FAFC;
+      border: 1.5px solid #CBD5E1;
+      border-radius: var(--radius-card);
+      padding: 1rem 1.4rem;
+      margin-top: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .para-quem-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 1.25rem;
+    }
+
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.25rem;
+      text-align: left;
+    }
+
+    .bonus-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 1.25rem;
+    }
+
+    .bonus-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 14px 12px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+    }
+
+    .bonus-badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #8B5CF6;
+      background: #F5F3FF;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .fast-action-box {
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.12) 0%, rgba(245, 158, 11, 0.08) 100%);
+      border: 1px solid #FDE68A;
+      border-radius: var(--radius-card);
+      padding: 0.9rem 1.3rem;
+      margin-top: 1rem;
+      text-align: left;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 1.25rem;
+      text-align: left;
+    }
+
+    .faq-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .faq-question {
+      font-weight: 800;
+      color: var(--ink-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .faq-answer {
+      color: var(--ink-secondary);
+    }
+
+    @media (max-width: 768px) {
+      .para-quem-grid, .guarantee-grid, .bonus-grid-3, .faq-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+  
+    @media (max-width: 768px) {
+      .diagnostic-box, .false-promise-box, .story-callout-box, .fast-action-box {
+        padding: 0.85rem 1rem !important;
+      }
+      .roi-equation-box {
+        padding: 0.85rem 1rem !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        text-align: center !important;
+      }
+      .roi-equation-box > div:last-child {
+        text-align: center !important;
+      }
+      .para-quem-grid, .guarantee-grid, .bonus-grid-3, .faq-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .diagnostic-box, .false-promise-box, .story-callout-box, .fast-action-box {
+        padding: 0.75rem 0.85rem !important;
+      }
+      .model-contrast-bar {
+        font-size: 0.72rem !important;
+        padding: 6px 10px !important;
+      }
+      .faq-card {
+        padding: 10px 12px !important;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 1. macOS MENUBAR -->
+  <header class="mac-menubar">
+    <div class="mac-menubar-left">
+      <svg class="mac-apple-logo-svg" viewBox="0 0 170 170">
+        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.7-3.04-7.58-7.77-11.65-14.19-5.77-9.03-10.15-19.46-13.14-31.29-2.99-11.83-4.49-22.95-4.49-33.36 0-14.24 3.49-26.06 10.46-35.46 6.98-9.4 15.93-14.22 26.87-14.47 5.01 0 10.51 1.33 16.51 3.99 6 2.65 10.13 4.04 12.39 4.16 1.74 0 5.86-1.39 12.36-4.16 6.5-2.77 11.99-4.04 16.48-3.81 12.83.63 23.36 5.58 31.59 14.85-11.2 6.78-16.66 16.29-16.38 28.53.28 9.94 4.14 18.27 11.58 24.99 7.44 6.72 16.23 10.56 26.37 11.52-2.18 6.74-4.89 13.34-8.13 19.8zM119.22 31.84c0-7.39 2.66-14.33 7.98-20.82 5.32-6.49 11.86-10.5 19.62-12.02.11 1.2.16 2.29.16 3.27 0 7.39-2.77 14.47-8.31 21.23-5.54 6.76-12.28 10.66-20.22 11.7-.22-1.09-.33-2.21-.33-3.36z"/>
+      </svg>
+      <span class="mac-menu-item active">Keynote</span>
+      <span class="mac-menu-item">Arquivo</span>
+      <span class="mac-menu-item">Editar</span>
+      <span class="mac-menu-item">Visualizar</span>
+      <span class="mac-menu-item">Apresentação</span>
+      <span class="mac-menu-item">Janela</span>
+      <span class="mac-menu-item">Ajuda</span>
+    </div>
+    <div class="mac-menubar-right">
+      <span class="mac-menu-item" id="macClock">14:35</span>
+    </div>
+  </header>
+
+  <!-- 2. DESKTOP AREA + KEYNOTE WINDOW -->
+  <div class="mac-desktop-area">
+    <div class="mac-window">
+      
+      <!-- Window Titlebar -->
+      <div class="mac-titlebar">
+        <div class="mac-traffic-lights">
+          <div class="traffic-light light-close" title="Fechar"></div>
+          <div class="traffic-light light-minimize" title="Minimizar"></div>
+          <div class="traffic-light light-expand" title="Expandir"></div>
+        </div>
+        <div class="mac-titlebar-title">
+          <svg class="icon-svg" style="width: 14px; height: 14px; color: #0F172A;" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          <span>Camila Moraes · Motor Imobiliário de Alta Conversão</span>
+        </div>
+        <div></div>
+      </div>
+
+      <!-- Slides Body -->
+      <div class="mac-window-body">
+
+        <!-- SLIDE 1: CAPA EXECUTIVA -->
+        <section class="deck-slide active" data-slide="1">
+          <h1 class="proposal-h1">A MÁQUINA DE VENDAS DA SUA CARREIRA IMOBILIÁRIA</h1>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            Plano Estratégico de Posicionamento, Tráfego Pago & Triagem Automatizada em Araraquara. Proposta Comercial Confidencial preparada com exclusividade para <strong>Camila Moraes</strong> (Corretora Especialista Damha & Buona Vita) por <strong>Lucas</strong> (Estrategista Comercial & Parceiro de Bastidores).
+          </p>
+
+          <!-- Diagnóstico Confidencial & Paradox Lead (Bloco 01) -->
+          <div class="diagnostic-box">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #0284C7; text-transform: uppercase; letter-spacing: 0.05em;">DIAGNÓSTICO ESTRATÉGICO CONFIDENCIAL · CAMILA MORAES</span>
+              <span style="font-size: 0.65rem; color: #64748B; font-weight: 600;">ANÁLISE DE MERCADO ARARAQUARA</span>
+            </div>
+            <p style="font-size: 0.86rem; color: #1E293B; line-height: 1.55; margin: 4px 0 0;">
+              Camila, você possui o que <strong>98% dos corretores de Araraquara passariam dez anos tentando aprender e não conseguiriam</strong>: elegância impecável, desenvoltura natural de câmera e captações de R$ 1,5 milhão a mais de R$ 3 milhões no <strong>Damha e Buona Vita</strong>. Você tem o CRECI ativo, a parceria com a Last Home e a coragem de contratar videomaker do seu bolso com drone.
+            </p>
+            <p style="font-size: 0.86rem; color: #1E293B; line-height: 1.55; margin: 2px 0 0;">
+              Mas por que, mesmo com esse talento raro, a sua rotina ainda parece uma <em>esteira rolante</em>: trabalhando dobrado para responder curiosos soltos no WhatsApp e levando pessoas sem crédito para ver casa no fim de semana?
+            </p>
+            <div style="font-size: 0.8rem; color: #475569; font-weight: 700; margin-top: 4px; border-top: 1px dashed var(--border-light); padding-top: 6px;">
+              O problema não é você, nem seus vídeos, nem a cidade. É que você estava jogando com as regras antigas de um jogo que mudou. Esta proposta apresenta a engrenagem para colocar compradores previsíveis na sua agenda.
+            </div>
+          </div>
+
+          <div class="grid-3" style="margin-top: 1.15rem;">
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #0284C7; margin-bottom: 4px;">PILAR 01</div>
+              <h4 class="card-title">Atração de Alta Intenção</h4>
+              <p class="card-desc">Google Meu Negócio verificado na 1ª página e anúncios de busca e Meta Ads no raio nobre de Araraquara.</p>
+            </div>
+
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #10B981; margin-bottom: 4px;">PILAR 02</div>
+              <h4 class="card-title">Vendas & Conversão</h4>
+              <p class="card-desc">Landing Page de alta autoridade substituindo o Canva e Filtro Anti-Curioso inteligente no WhatsApp.</p>
+            </div>
+
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #8B5CF6; margin-bottom: 4px;">PILAR 03</div>
+              <h4 class="card-title">Pós-Venda & LTV</h4>
+              <p class="card-desc">Pipeline visual CRM de negociações em mesa e canal confidencial para captação de novos proprietários.</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 2: DIAGNOSTICO OPERACIONAL -->
+        <section class="deck-slide" data-slide="2">
+          <h2 class="proposal-h2">POR QUE GRAVAR VÍDEOS LINDOS NÃO ESTÁ GERANDO VENDAS PREVISÍVEIS?</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            O mercado imobiliário tradicional comete falhas estruturais graves que drenam sua energia e afastam compradores com dinheiro na mão:
+          </p>
+
+          <!-- Inimigo Externo / Mentira dos Gurus (Bloco 02) -->
+          <div class="false-promise-box">
+            <div style="width: 8px; height: 8px; border-radius: 50%; background: #EF4444; margin-top: 6px; flex-shrink: 0;"></div>
+            <div style="font-size: 0.83rem; color: #991B1B; line-height: 1.52;">
+              <strong>A Grande Mentira do "Feed Orgânico" e das Agências Tradicionais:</strong> Gurus colocaram na cabeça dos corretores que <em>"basta postar Reels com música em alta e link na bio que clientes de alto padrão caem do céu"</em>. A realidade técnica: o algoritmo entrega para míseros <strong>4% a 6%</strong> (amigos, familiares e corretores concorrentes espiando suas captações). Agências cobram R$ 5.000 por 12 posts estáticos no Canva, mas <strong>curtida no Instagram não paga boleto e impressão não assina escritura no cartório</strong>.
+            </div>
+          </div>
+
+          <!-- Os 3 Ralos Invisíveis (Bloco 04) -->
+          <div class="grid-3">
+            <div class="card-clean" style="border-left: 4px solid var(--danger);">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 800; color: var(--danger); margin-bottom: 4px;">RALO 01</div>
+              <h4 class="card-title">Efeito Vitrine Apagada</h4>
+              <p class="card-desc">
+                Investir R$ 300 a R$ 600 em videomaker e drone e publicar apenas no feed. É o mesmo que colocar a joia mais cara da cidade em uma vitrine escondida em um beco escuro: morre em menos de 800 views sem atingir quem tem dinheiro para comprar.
+              </p>
+            </div>
+
+            <div class="card-clean" style="border-left: 4px solid var(--danger);">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 800; color: var(--danger); margin-bottom: 4px;">RALO 02</div>
+              <h4 class="card-title">Armadilha do Curioso</h4>
+              <p class="card-desc">
+                Horas perdidas no WhatsApp respondendo "qual o valor?" para pessoas sem capacidade financeira, que oferecem terrenos irregulares no interior e carros populares usados como entrada em casas de R$ 2,5 milhões.
+              </p>
+            </div>
+
+            <div class="card-clean" style="border-left: 4px solid var(--danger);">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 800; color: var(--danger); margin-bottom: 4px;">RALO 03</div>
+              <h4 class="card-title">Invisibilidade no Google</h4>
+              <p class="card-desc">
+                Quando médicos transferidos ou empresários do agro pesquisam "casa à venda Damha Araraquara" no Google, encontram imobiliárias tradicionais com sites próprios. Sem o Google Meu Negócio estruturado e anúncios de busca, você simplesmente não existe para esse comprador.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 3: O PADRÃO DE EXIGÊNCIA ALTO PADRÃO -->
+        <section class="deck-slide" data-slide="3">
+          <h2 class="proposal-h2">O CLIENTE DE R$ 2 MILHÕES NÃO COMPRA DE QUEM PARECE AMADOR</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            Famílias de alto patrimônio compram confiança, segurança jurídica e discrição. Veja o impacto direto do seu ecossistema digital:
+          </p>
+
+          <!-- Emotional Story Callout: A Guia Turistica de Luxo (Bloco 03) -->
+          <div class="story-callout-box">
+            <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #B45309; text-transform: uppercase; margin-bottom: 4px;">A SÍNDROME DA "GUIA TURÍSTICA DE LUXO GRATUITA"</div>
+            <p style="font-size: 0.83rem; color: #451A03; line-height: 1.5; margin: 0;">
+              A pior rotina para uma corretora de luxo: acordar no sábado de sol, passar duas horas se arrumando, abastecer o carro, pegar a chave, ir até a portaria do condomínio fechado, guiar um tour de duas horas por uma casa de R$ 2,5 milhões... para na segunda-feira ouvir: <em>"A gente amou a casa, Camila! Mas só compramos se o proprietário aceitar um terreno irregular no Paraná e um carro usado como entrada..."</em>. Você virou entretenimento gratuito de fim de semana para curiosos, enquanto o médico comprador de verdade pesquisava no Google e fechava com a concorrência.
+            </p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card-clean" style="border-left: 4px solid var(--danger); background: #FAF9F6;">
+              <h4 class="card-title" style="color: var(--danger);">Percepção Amadora (O que Afasta e Esgota)</h4>
+              <ul style="list-style: none; font-size: 0.81rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 8px;">
+                <li>- Link do Canva na bio com botões genéricos e o selo <em>"Criado com o Canva"</em> no rodapé;</li>
+                <li>- Sem catálogo próprio, fichas técnicas ou storytelling sensorial dos condomínios;</li>
+                <li>- Atendimento misturado no WhatsApp pessoal sem filtro prévio de capacidade de pagamento;</li>
+                <li>- Ausência formal no topo do Google Maps quando o investidor pesquisa ativamente na cidade.</li>
+              </ul>
+            </div>
+
+            <div class="card-clean card-clean--active" style="border-left: 4px solid #0F172A;">
+              <h4 class="card-title" style="color: #0F172A;">Percepção Elite Advisor (O que Converte e Protege)</h4>
+              <ul style="list-style: none; font-size: 0.81rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 8px;">
+                <li>- Landing Page própria, veloz e elegante com domínio oficial, sem menção a ferramentas gratuitas;</li>
+                <li>- Cópia persuasiva sensorial descrevendo estilo de vida no Damha e Buona Vita;</li>
+                <li>- Filtro Anti-Curioso no WhatsApp: só entra no seu carro e na sua agenda quem tem capacidade comprovada;</li>
+                <li>- Perfil verificado no topo do Google com autoridade de especialista e curadoria patrimonial.</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 4: FUNIL DE VENDAS VISUAL DIRETO (SEM ABAS OU COMPLICACOES) -->
+        <section class="deck-slide" data-slide="4">
+          <h2 class="proposal-h2">O FUNIL DE VENDAS DA SUA OPERAÇÃO COMERCIAL</h2>
+          <p class="proposal-desc" style="margin-bottom: 0.9rem;">
+            A estrutura exata e enxuta que vamos construir para você: atração qualificada, página de vendas de alto padrão, triagem no WhatsApp e fechamento de contrato.
+          </p>
+
+          <!-- Modelo Quebrado vs Novo Motor (Bloco 05) -->
+          <div class="model-contrast-bar">
+            <div style="font-weight: 700; color: #0F172A; margin-bottom: 2px;">
+              O Modelo Velho Quebrado: <span style="font-weight: 400; color: #64748B;">Gravar Vídeo → Postar Reels → Curioso no Direct → Perder 2h no WhatsApp → Visita às Cegas → Cliente sem Crédito → Frustração.</span>
+            </div>
+            <div style="font-weight: 700; color: #047857;">
+              O Novo Motor de Alta Conversão: <span style="font-weight: 500; color: #065F46;">Tráfego de Intenção (Google + Meta) → Landing Page de Luxo → Filtro Anti-Curioso no WhatsApp → Visita VIP com Comprador Aprovado → Fechamento & Comissão.</span>
+            </div>
+          </div>
+
+          <div class="funnel-flow-container">
+            <div class="funnel-grid-4">
+              
+              <!-- Etapa 1: Atração -->
+              <div class="funnel-card">
+                <div class="funnel-badge-top">
+                  <svg style="width:13px;height:13px;fill:#0284C7;" viewBox="0 0 24 24"><path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/></svg>
+                  <span>1. Atração</span>
+                </div>
+                <div class="funnel-card-title">Meta & Google Ads</div>
+                <div class="funnel-card-desc">
+                  Anúncios no Google para quem pesquisa casas no Damha + distribuição em vídeo no Instagram para o público nobre local.
+                </div>
+                <div class="funnel-card-items">
+                  - Google: Busca ativa com dinheiro na mão<br>
+                  - Meta: Médicos, agro e empresários
+                </div>
+                <div class="funnel-arrow">→</div>
+              </div>
+
+              <!-- Etapa 2: Página de Vendas -->
+              <div class="funnel-card highlight">
+                <div class="funnel-badge-top" style="color: #0F172A;">
+                  <svg style="width:13px;height:13px;stroke:#0F172A;" class="icon-svg" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line></svg>
+                  <span>2. Conversão</span>
+                </div>
+                <div class="funnel-card-title">Página de Vendas</div>
+                <div class="funnel-card-desc">
+                  Landing Page oficial de alto padrão substituindo o Canva. Vitrine de condomínios, fichas técnicas e cópia persuasiva.
+                </div>
+                <div class="funnel-card-items">
+                  - Retém o comprador de classe A<br>
+                  - Transmite segurança e autoridade
+                </div>
+                <div class="funnel-arrow">→</div>
+              </div>
+
+              <!-- Etapa 3: WhatsApp Filtro -->
+              <div class="funnel-card">
+                <div class="funnel-badge-top">
+                  <svg style="width:13px;height:13px;fill:#25D366;" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                  <span>3. Triagem</span>
+                </div>
+                <div class="funnel-card-title">Filtro no WhatsApp</div>
+                <div class="funnel-card-desc">
+                  Triagem automática e inteligente de poder financeiro antes de qualquer agendamento presencial de visita.
+                </div>
+                <div class="funnel-card-items">
+                  - Valida recursos e financiamento<br>
+                  - Elimina curiosos sem crédito
+                </div>
+                <div class="funnel-arrow">→</div>
+              </div>
+
+              <!-- Etapa 4: Fechamento -->
+              <div class="funnel-card" style="border-color: #10B981; background: #ECFDF5;">
+                <div class="funnel-badge-top" style="color: #065F46;">
+                  <svg style="width:13px;height:13px;stroke:#10B981;" class="icon-svg" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                  <span>4. Fechamento</span>
+                </div>
+                <div class="funnel-card-title" style="color: #065F46;">Visita VIP & Venda</div>
+                <div class="funnel-card-desc" style="color: #047857;">
+                  Camila atende apenas compradores pré-qualificados na portaria do Damha ou Buona Vita. Negociação ágil e fechamento.
+                </div>
+                <div class="funnel-card-items" style="border-top-color: #A7F3D0; color: #065F46;">
+                  - Comissão de R$ 36k a R$ 100k<br>
+                  - Tempo e energia protegidos
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div style="font-size: 0.77rem; color: #64748B; margin-top: 10px; text-align: center;">
+            Com essa engrenagem, o curioso bate no filtro e vai embora sozinho, sem você gastar 1 minuto. O cliente sério é recebido como em uma recepção de hotel 5 estrelas.
+          </div>
+
+        </section>
+
+        <!-- SLIDE 5: O CUSTO REAL DA INAÇÃO (CONTRASTE FINANCEIRO CLARO) -->
+        <section class="deck-slide" data-slide="5">
+          <h2 class="proposal-h2">O CUSTO REAL DE GRAVAR VÍDEOS SEM TRÁFEGO: R$ 500 NO FEED VS R$ 36.000 NO BOLSO</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            Entenda por que postar tours apenas no feed queima seu investimento e como transformar gravações em vendas reais com matemática contábil:
+          </p>
+
+          <div class="grid-2">
+            <!-- Modelo Organico Atual -->
+            <div class="card-clean" style="border-left: 4px solid var(--danger); background: #FAF9F6;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 800; color: var(--danger); margin-bottom: 6px;">O MODELO ATUAL (A VITRINE APAGADA)</div>
+              <h4 class="card-title" style="color: var(--danger);">Gastar em Produção Sem Distribuição</h4>
+              <p class="card-desc" style="margin-top: 8px;">
+                Você contrata cinegrafista e drone por <strong>R$ 300 a R$ 600 por tour</strong>. O material fica impecável, mas é postado solto no feed do Instagram.
+              </p>
+              <ul style="list-style: none; font-size: 0.8rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 12px; border-top: 1px dashed var(--border-light); padding-top: 10px;">
+                <li>- O algoritmo entrega apenas para ~800 amigos e corretores rivais;</li>
+                <li>- Nenhum médico ou empresário de Araraquara é alcançado com intenção de compra;</li>
+                <li>- Os poucos comentários são curiosos perguntando "valor?" que somem em seguida;</li>
+                <li>- <strong>Resultado financeiro:</strong> R$ 5.000/ano jogados no lixo com zero previsibilidade de vendas.</li>
+              </ul>
+            </div>
+
+            <!-- Modelo com Tráfego de Intenção -->
+            <div class="card-clean card-clean--active" style="border-left: 4px solid #10B981; background: #FFFFFF;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 800; color: #10B981; margin-bottom: 6px;">O MODELO PROFISSIONAL (TRÁFEGO DE INTENÇÃO)</div>
+              <h4 class="card-title" style="color: #0F172A;">Multiplicar o Alcance com Público Comprador</h4>
+              <p class="card-desc" style="margin-top: 8px;">
+                Pegamos seus melhores vídeos e colocamos com apenas <strong>R$ 20 a R$ 30/dia</strong> exatamente na tela de quem tem poder aquisitivo comprovado na região.
+              </p>
+              <ul style="list-style: none; font-size: 0.8rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 12px; border-top: 1px dashed var(--border-light); padding-top: 10px;">
+                <li>- Alcance cirúrgico de 15.000 a 25.000 moradores de classe A por mês;</li>
+                <li>- Conexão direta com a Landing Page própria e WhatsApp qualificado;</li>
+                <li>- O vídeo trabalha dia e noite como um vendedor ativo da sua carteira;</li>
+                <li>- <strong>Resultado financeiro:</strong> Uma venda fechada gera comissão de R$ 36.000+ no seu bolso.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- A Matemática Contábil do ROI (Bloco 10 & 12) -->
+          <div class="roi-equation-box">
+            <div style="flex: 1; min-width: 280px;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #0284C7; text-transform: uppercase;">A MATEMÁTICA CONTÁBIL DO RETORNO (ROI IMBATÍVEL)</div>
+              <div style="font-size: 0.84rem; color: #1E293B; line-height: 1.45; margin-top: 3px;">
+                Venda de 1 casa de condomínio (ex: <strong>R$ 1.200.000 a R$ 1.500.000</strong>): Comissão padrão de 6% = <strong>R$ 72.000 a R$ 90.000</strong>. Com split imobiliário de 50%, entram limpos <strong>R$ 36.000 a R$ 45.000 líquidos na sua conta</strong>.
+              </div>
+            </div>
+            <div style="background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 8px; padding: 8px 14px; text-align: right; flex-shrink: 0;">
+              <div style="font-size: 0.68rem; font-weight: 800; color: #065F46; text-transform: uppercase;">Retorno Sobre Investimento</div>
+              <div style="font-size: 1.2rem; font-weight: 800; color: #047857; letter-spacing: -0.02em;">10x o Setup Completo</div>
+              <div style="font-size: 0.66rem; color: #065F46;">1 venda paga todo o sistema por anos</div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 6: MAPA MENTAL EXPANSIVEL COM LINHAS SVG REAIS -->
+        <section class="deck-slide" data-slide="6">
+          <h2 class="proposal-h2">A ESTRUTURA EXPANSÍVEL DO SEU ECOSSISTEMA COMERCIAL</h2>
+          <p class="proposal-desc" style="margin-bottom: 0.85rem;">
+            Mapa mental em tema claro nativo: clique em cada pilar para recolher ou expandir as entregas conectadas por linhas dinâmicas.
+          </p>
+
+          <div class="mindmap-light-container">
+            <div class="mindmap-toolbar-light">
+              <div class="mindmap-title-light">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                PLANO TÁTICO · GESTÃO COMERCIAL CAMILA MORAES
+              </div>
+              <div class="mindmap-btn-group-light">
+                <button class="mindmap-tool-btn-light" onclick="expandAllMindmapLight()">Expandir Todos</button>
+                <button class="mindmap-tool-btn-light" onclick="collapseAllMindmapLight()">Recolher Todos</button>
+              </div>
+            </div>
+
+            <div class="mindmap-canvas-light" id="mindmapCanvasLight">
+              <svg class="mm-svg-canvas-light" id="mindmapSvgLight"></svg>
+
+              <!-- No Raiz -->
+              <div class="mm-root-node-light" id="mmRootLight">
+                <div class="mm-root-tag-light">Núcleo Central</div>
+                <div class="mm-root-title-light">Camila Moraes</div>
+                <div style="font-size: 0.68rem; color: #CBD5E1; margin-top: 4px; white-space: nowrap;">Operação Imobiliária 2026</div>
+              </div>
+
+              <!-- Coluna dos 3 Pilares -->
+              <div class="mm-branches-col-light">
+                
+                <!-- Pilar 1: Atração -->
+                <div class="mm-branch-row-light">
+                  <div class="mm-pillar-node-light mm-pillar-blue-light expanded" id="pillarLight1" onclick="toggleMindNodeLight('p1')">
+                    <span class="mm-pillar-text-light">1. Atração (Marketing & Busca)</span>
+                    <span class="mm-toggle-badge-light">+</span>
+                  </div>
+                  <div class="mm-children-col-light open" id="childrenLight_p1">
+                    <div class="mm-leaf-node-light">1.1 Google Meu Negócio <span>(1ª Página de Busca)</span></div>
+                    <div class="mm-leaf-node-light">1.2 Google Ads Damha <span>(Alta Intenção)</span></div>
+                    <div class="mm-leaf-node-light">1.3 Meta Ads Geolocalizado <span>(Médicos & Agro)</span></div>
+                  </div>
+                </div>
+
+                <!-- Pilar 2: Vendas -->
+                <div class="mm-branch-row-light">
+                  <div class="mm-pillar-node-light mm-pillar-teal-light expanded" id="pillarLight2" onclick="toggleMindNodeLight('p2')">
+                    <span class="mm-pillar-text-light">2. Vendas (Funil & Conversão)</span>
+                    <span class="mm-toggle-badge-light">+</span>
+                  </div>
+                  <div class="mm-children-col-light open" id="childrenLight_p2">
+                    <div class="mm-leaf-node-light" style="border-left-color: #10B981;">2.1 Landing Page de Luxo <span>(Substitui Canva)</span></div>
+                    <div class="mm-leaf-node-light" style="border-left-color: #10B981;">2.2 Filtro Anti-Curioso <span>(Triagem Renda)</span></div>
+                    <div class="mm-leaf-node-light" style="border-left-color: #10B981;">2.3 Agendamento VIP <span>(Agenda Blindada)</span></div>
+                  </div>
+                </div>
+
+                <!-- Pilar 3: Pós-Venda -->
+                <div class="mm-branch-row-light">
+                  <div class="mm-pillar-node-light mm-pillar-purple-light expanded" id="pillarLight3" onclick="toggleMindNodeLight('p3')">
+                    <span class="mm-pillar-text-light">3. Pós-Venda & LTV (Carteira)</span>
+                    <span class="mm-toggle-badge-light">+</span>
+                  </div>
+                  <div class="mm-children-col-light open" id="childrenLight_p3">
+                    <div class="mm-leaf-node-light" style="border-left-color: #8B5CF6;">3.1 CRM em Kanban <span>(Negociações em Mesa)</span></div>
+                    <div class="mm-leaf-node-light" style="border-left-color: #8B5CF6;">3.2 Captação Exclusiva <span>(Proprietários)</span></div>
+                    <div class="mm-leaf-node-light" style="border-left-color: #8B5CF6;">3.3 Carteira de Investidores <span>(Reativação)</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 7: DE CORRETORA COMUM PARA ADVISOR -->
+        <section class="deck-slide" data-slide="7">
+          <h2 class="proposal-h2">DE 'CORRETORA COMUM' PARA A ADVISOR NÚMERO 1 DE ARARAQUARA</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            O posicionamento estratégico que constrói reputação sólida e atrai clientes que não discutem comissão:
+          </p>
+
+          <div class="grid-3">
+            <div class="card-clean">
+              <h4 class="card-title">1. Consultoria Patrimonial</h4>
+              <p class="card-desc">
+                Você não apenas mostra cômodos; você orienta a família sobre valorização do metro quadrado, custos de condomínio e liquidez futura.
+              </p>
+            </div>
+
+            <div class="card-clean">
+              <h4 class="card-title">2. Segurança ao Proprietário</h4>
+              <p class="card-desc">
+                Donos de residências nobres exigem discrição total. Com a triagem prévia, eles sabem que você não coloca pessoas estranhas dentro da casa deles.
+              </p>
+            </div>
+
+            <div class="card-clean">
+              <h4 class="card-title">3. Velocidade & Exclusividade</h4>
+              <p class="card-desc">
+                Atendimento ágil e resposta imediata com canal VIP estruturado, posicionando seu nome como a corretora referência no segmento.
+              </p>
+            </div>
+          </div>
+
+          <!-- Para Quem É vs Para Quem NÃO É (Bloco 07) -->
+          <div class="para-quem-grid">
+            <div class="card-clean" style="border-left: 4px solid #10B981; background: #F0FDF4;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #065F46; text-transform: uppercase; margin-bottom: 4px;">PARA QUEM É ESSA ESTRUTURA</div>
+              <ul style="list-style: none; font-size: 0.8rem; color: #166534; line-height: 1.55;">
+                <li>• <strong>Para você, Camila:</strong> que já tem talento natural e presença de vídeo, mas precisa de uma presença digital à altura das casas de milhões que vende;</li>
+                <li>• <strong>Para quem quer previsibilidade:</strong> parar de perder tempo com curiosos e atender apenas compradores com crédito e recursos aprovados;</li>
+                <li>• <strong>Para liderar o mercado:</strong> consolidar seu nome como a principal referência jovem de corretagem de luxo em Araraquara.</li>
+              </ul>
+            </div>
+
+            <div class="card-clean" style="border-left: 4px solid var(--danger); background: #FEF2F2;">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #991B1B; text-transform: uppercase; margin-bottom: 4px;">PARA QUEM NÃO É ESSA ESTRUTURA</div>
+              <ul style="list-style: none; font-size: 0.8rem; color: #991B1B; line-height: 1.55;">
+                <li>• <strong>Não é para corretores acomodados:</strong> que preferem ficar sentados no balcão da imobiliária esperando o telefone tocar por milagre;</li>
+                <li>• <strong>Não é para "dancinhas de rede social":</strong> ou criação de conteúdo vazio sem estratégia nem conversão em vendas reais;</li>
+                <li>• <strong>Não é para quem não quer crescer:</strong> ou quem não tem o compromisso de atender com agilidade os clientes selecionados que chegam na mão.</li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 8: DEMONSTRACAO WHATSAPP COM SCROLL FUNCIONAL -->
+        <section class="deck-slide" data-slide="8">
+          <h2 class="proposal-h2">VEJA O FILTRO ANTI-CURIOSO ATENDENDO NO WHATSAPP</h2>
+          <p class="proposal-desc" style="margin-bottom: 1rem;">
+            Clique nos contatos à esquerda para alternar. Role livremente pelas mensagens abaixo para acompanhar os diálogos completos:
+          </p>
+
+          <div class="mac-whatsapp-window">
+            
+            <!-- Sidebar -->
+            <div class="wa-sidebar">
+              <div class="wa-sidebar-header">
+                <span>Conversas Filtradas</span>
+                <span style="font-size: 0.68rem; color: #0284C7; font-weight: 700;">3 ATIVAS</span>
+              </div>
+              
+              <div class="wa-chat-item active" onclick="switchWaChat('eduardo')">
+                <div class="wa-avatar" style="background: #DBEAFE; color: #1E40AF;">EM</div>
+                <div class="wa-chat-meta">
+                  <div class="wa-chat-name">Dr. Eduardo Mendes</div>
+                  <div class="wa-chat-snippet">Perfeito, quinta às 17h no Damha!</div>
+                </div>
+              </div>
+
+              <div class="wa-chat-item" onclick="switchWaChat('marcelo')">
+                <div class="wa-avatar" style="background: #FEF3C7; color: #92400E;">MS</div>
+                <div class="wa-chat-meta">
+                  <div class="wa-chat-name">Marcelo Silveira (Agro)</div>
+                  <div class="wa-chat-snippet">A permuta já foi avaliada sim...</div>
+                </div>
+              </div>
+
+              <div class="wa-chat-item" onclick="switchWaChat('curioso')">
+                <div class="wa-avatar" style="background: #FEE2E2; color: #991B1B;">CR</div>
+                <div class="wa-chat-meta">
+                  <div class="wa-chat-name">Curioso Sem Perfil</div>
+                  <div class="wa-chat-snippet">[Triagem encerrou sem visita]</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="wa-main-chat">
+              <div class="wa-chat-header">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div class="wa-avatar" id="waHeaderAvatar" style="width: 32px; height: 32px; background: #DBEAFE; color: #1E40AF;">EM</div>
+                  <div>
+                    <div id="waHeaderName" style="font-size: 0.85rem; font-weight: 700; color: #111B21;">Dr. Eduardo Mendes (Cirurgião · Damha I)</div>
+                    <div id="waHeaderStatus" style="font-size: 0.7rem; color: #16A34A; font-weight: 600;">online agora - qualificado</div>
+                  </div>
+                </div>
+                <div class="wa-scroll-hint">
+                  <svg class="icon-svg" style="width: 12px; height: 12px;" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                  <span>Role para ver toda a conversa</span>
+                </div>
+              </div>
+
+              <!-- Container Rolavel com Scroll Livre -->
+              <div class="wa-messages-container" id="waMessagesBox"></div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 9: CANVA VS STACKS DE VALOR DA NOVA LANDING PAGE -->
+        <section class="deck-slide" data-slide="9">
+          <h2 class="proposal-h2">O SALTO VISUAL QUE VAI COLOCAR VOCÊ NA PRIMEIRA DIVISÃO</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            Veja o contraste direto entre o link atual do Canva e as stacks de valor concretas que você terá com a nova Landing Page profissional:
+          </p>
+
+          <div class="grid-2">
+            <!-- Como Esta Hoje (Canva) -->
+            <div class="card-clean" style="border: 2px dashed rgba(239, 68, 68, 0.4); background: #FAF9F6; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h4 class="card-title" style="color: var(--danger); margin: 0;">Como Está Hoje (Canva)</h4>
+                <span style="font-size: 0.68rem; font-weight: 800; color: var(--danger); background: #FEE2E2; padding: 2px 8px; border-radius: var(--radius-pill);">PERDE LEADS</span>
+              </div>
+              <div style="display: flex; gap: 14px; align-items: center;">
+                <img src="linktree_canva_atual.jpg" alt="Linktree Canva Atual" style="width: 110px; height: 165px; object-fit: cover; border-radius: 6px; border: 1px solid var(--border-light); flex-shrink: 0;" />
+                <div style="font-size: 0.78rem; color: var(--ink-secondary); line-height: 1.55;">
+                  • Fundo de tecido acetinado sem fotos dos imóveis.<br>
+                  • Apenas 4 botões transparentes genéricos.<br>
+                  • Sem nenhuma headline persuasiva ou prova social.<br>
+                  • Rodapé estampado: <em>"Criado com o Canva"</em>.<br>
+                  • O cliente de alto padrão fecha a aba em 3 segundos.
+                </div>
+              </div>
+              <div style="font-size: 0.74rem; color: #991B1B; margin-top: 10px; border-top: 1px dashed rgba(239,68,68,0.3); padding-top: 8px; font-weight: 600;">
+                O investidor que aloca R$ 2M deduz informalidade em 3 segundos e procura uma imobiliária estruturada.
+              </div>
+            </div>
+
+            <!-- Stacks de Valor da Nova Landing Page -->
+            <div class="card-clean card-clean--active" style="border: 2px solid #0F172A; background: #FFFFFF; padding: 1.25rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h4 class="card-title" style="color: #0F172A; margin: 0;">Stacks de Valor da Nova Landing Page</h4>
+                <span style="font-size: 0.68rem; font-weight: 800; color: #065F46; background: #ECFDF5; padding: 2px 8px; border-radius: var(--radius-pill);">ALTA CONVERSÃO</span>
+              </div>
+
+              <!-- Stack 1 -->
+              <div class="stack-value-row">
+                <div class="stack-value-badge">STACK 01</div>
+                <div>
+                  <div class="stack-value-title">Autoridade & Curadoria de Condomínios</div>
+                  <div class="stack-value-desc">Headline sensorial e narrativa que posiciona a Camila como referência no Damha e Buona Vita.</div>
+                </div>
+              </div>
+
+              <!-- Stack 2 -->
+              <div class="stack-value-row">
+                <div class="stack-value-badge">STACK 02</div>
+                <div>
+                  <div class="stack-value-title">Vitrine de Alto Padrão com Fichas Claras</div>
+                  <div class="stack-value-desc">Galeria com fotos profissionais, metragens e diferenciais claros que eliminam especulação.</div>
+                </div>
+              </div>
+
+              <!-- Stack 3 -->
+              <div class="stack-value-row">
+                <div class="stack-value-badge">STACK 03</div>
+                <div>
+                  <div class="stack-value-title">Filtro Ativo Integrado no WhatsApp</div>
+                  <div class="stack-value-desc">Botões inteligentes que acionam a triagem antes de liberar visitas presenciais.</div>
+                </div>
+              </div>
+
+              <!-- Stack 4 -->
+              <div class="stack-value-row">
+                <div class="stack-value-badge">STACK 04</div>
+                <div>
+                  <div class="stack-value-title">Canal Confidencial para Proprietários</div>
+                  <div class="stack-value-desc">Seção exclusiva para captação de novas propriedades com garantia de discrição e sigilo.</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 10: FUTURE PACING MINIMALISTA & SOFISTICADO -->
+        <section class="deck-slide" data-slide="10">
+          <h2 class="proposal-h2">O NOVO PADRÃO DA SUA ROTINA COMERCIAL</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            A transformação na prática quando a sua operação de atração e vendas estiver funcionando:
+          </p>
+
+          <div class="fp-minimal-list">
+            <div class="fp-minimal-item">
+              <div class="fp-minimal-dot"></div>
+              <div class="fp-minimal-text">
+                <strong>Entrar na portaria do Damha ou Buona Vita no fim de semana com segurança absoluta:</strong> a certeza de que a família ao seu lado possui crédito bancário aprovado ou liquidez imediata para fechar negócio.
+              </div>
+            </div>
+
+            <div class="fp-minimal-item">
+              <div class="fp-minimal-dot"></div>
+              <div class="fp-minimal-text">
+                <strong>Ver seus vídeos gravados sendo distribuídos de forma cirúrgica:</strong> milhares de moradores de alta renda de Araraquara assistindo aos seus tours com intenção real de compra.
+              </div>
+            </div>
+
+            <div class="fp-minimal-item">
+              <div class="fp-minimal-dot"></div>
+              <div class="fp-minimal-text">
+                <strong>Compartilhar o link do seu site próprio em jantares e reuniões de negócios:</strong> o orgulho e sofisticação de entregar uma presença digital no nível das maiores corretoras do país.
+              </div>
+            </div>
+
+            <div class="fp-minimal-item">
+              <div class="fp-minimal-dot"></div>
+              <div class="fp-minimal-text">
+                <strong>Ser procurada ativamente por proprietários de condomínios fechados:</strong> donos de imóveis exclusivos pedindo que você conduza a venda com discrição e exclusividade.
+              </div>
+            </div>
+
+            <div class="fp-minimal-item">
+              <div class="fp-minimal-dot" style="background: #10B981;"></div>
+              <div class="fp-minimal-text">
+                <strong style="color: #065F46;">Ter previsibilidade de comissões de R$ 36.000 a R$ 100.000 no caixa:</strong> o fim da dependência de indicações esporádicas e da sensação de trabalhar no escuro.
+              </div>
+            </div>
+          </div>
+
+          <!-- Validação de Mercado (Bloco 14) -->
+          <div style="background: #F8FAFC; border: 1px solid var(--border-light); border-left: 3px solid #0284C7; border-radius: var(--radius-sm); padding: 10px 14px; margin-top: 1.25rem; font-size: 0.78rem; color: #334155; line-height: 1.5;">
+            <strong>Metodologia Validada pelos Maiores Corretores do País:</strong> Esta mesma arquitetura (tráfego de intenção + landing page veloz + qualificação ativa) é a base que os maiores corretores de São Paulo e das capitais utilizam para faturar múltiplos seis dígitos todo mês. Não estamos inventando a roda: estamos aplicando o que funciona no mais alto nível com exclusividade para o seu nome em Araraquara.
+          </div>
+
+        </section>
+
+        <!-- SLIDE 11: STACK DE ENTREGÁVEIS (SEM PREÇO E SEM DISCLAIMER) -->
+        <section class="deck-slide" data-slide="11">
+          <h2 class="proposal-h2">A STACK COMPLETA DE ENTREGÁVEIS DO SEU SISTEMA</h2>
+          <p class="proposal-desc" style="margin-bottom: 1.15rem;">
+            Toda a infraestrutura necessária entregue pronta, configurada e operada nos bastidores:
+          </p>
+
+          <div class="grid-3">
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #0284C7; margin-bottom: 4px;">PILAR 1</div>
+              <h4 class="card-title">Atração & Tráfego</h4>
+              <ul style="list-style: none; font-size: 0.8rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 8px;">
+                <li>- Google Meu Negócio verificado na 1ª página</li>
+                <li>- Campanhas de Google Ads para busca Damha</li>
+                <li>- Campanhas de Meta Ads no raio nobre local</li>
+                <li>- Distribuição paga de tours gravados em vídeo</li>
+              </ul>
+            </div>
+
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #10B981; margin-bottom: 4px;">PILAR 2</div>
+              <h4 class="card-title">Vendas & Conversão</h4>
+              <ul style="list-style: none; font-size: 0.8rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 8px;">
+                <li>- Landing Page própria de alta velocidade</li>
+                <li>- Cópia persuasiva escrita para converter</li>
+                <li>- Vitrine categorizada de condomínios fechados</li>
+                <li>- Filtro Anti-Curioso estruturado no WhatsApp</li>
+              </ul>
+            </div>
+
+            <div class="card-clean">
+              <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 700; color: #8B5CF6; margin-bottom: 4px;">PILAR 3</div>
+              <h4 class="card-title">Pós-Venda & CRM</h4>
+              <ul style="list-style: none; font-size: 0.8rem; color: var(--ink-secondary); line-height: 1.6; margin-top: 8px;">
+                <li>- CRM organizado em pipeline visual de vendas</li>
+                <li>- Canal confidencial de captação de proprietários</li>
+                <li>- Gestão de oportunidades quentes e propostas</li>
+                <li>- Acompanhamento semanal de taxas de fechamento</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bônus de Alta Alavancagem & Ancoragem de Mercado (Bloco 08 & 12) -->
+          <div class="bonus-grid-3">
+            <div class="bonus-card">
+              <div class="bonus-badge">BÔNUS EXCLUSIVO 01</div>
+              <div style="font-size: 0.82rem; font-weight: 800; color: var(--ink-dark); margin-bottom: 2px;">Guia de Roteiros Magnéticos</div>
+              <div style="font-size: 0.74rem; color: var(--ink-secondary); line-height: 1.45;">Modelos de scripts de 60 segundos testados para gravação com videomaker.</div>
+              <div style="font-size: 0.7rem; font-weight: 700; color: #10B981; margin-top: 6px;">Valor: R$ 600,00 · Gratuito</div>
+            </div>
+
+            <div class="bonus-card">
+              <div class="bonus-badge">BÔNUS EXCLUSIVO 02</div>
+              <div style="font-size: 0.82rem; font-weight: 800; color: var(--ink-dark); margin-bottom: 2px;">Captação para Proprietários</div>
+              <div style="font-size: 0.74rem; color: var(--ink-secondary); line-height: 1.45;">Página integrada para atrair donos de condomínios fechados com total sigilo.</div>
+              <div style="font-size: 0.7rem; font-weight: 700; color: #10B981; margin-top: 6px;">Valor: R$ 800,00 · Gratuito</div>
+            </div>
+
+            <div class="bonus-card">
+              <div class="bonus-badge">BÔNUS EXCLUSIVO 03</div>
+              <div style="font-size: 0.82rem; font-weight: 800; color: var(--ink-dark); margin-bottom: 2px;">Suporte Direto por 60 Dias</div>
+              <div style="font-size: 0.74rem; color: var(--ink-secondary); line-height: 1.45;">Linha direta com o Lucas no WhatsApp para ajustes de anúncios e estratégia.</div>
+              <div style="font-size: 0.7rem; font-weight: 700; color: #10B981; margin-top: 6px;">Valor: R$ 1.500,00 · Gratuito</div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.74rem; color: #64748B; text-align: center; margin-top: 10px;">
+            Total de <strong>R$ 2.900,00 em bônus inclusos</strong>. No mercado tradicional, o pacote completo custaria entre <strong>R$ 9.000,00 e R$ 12.000,00</strong>.
+          </div>
+
+        </section>
+
+        <!-- SLIDE 12: O PACTO DE COMPROMETIMENTO (TUDO DESMARCADO + CTA BLACK) -->
+        <section class="deck-slide" data-slide="12">
+          <div style="text-align: center; max-width: 820px; margin: 0 auto;">
+            <h2 class="proposal-h1" style="font-size: 2.1rem; margin-bottom: 0.4rem;">
+              O PACTO DE COMPROMETIMENTO COMERCIAL
+            </h2>
+            <p class="proposal-desc" style="margin: 0 auto 1.15rem; font-size: 0.88rem;">
+              Camila, antes de abrirmos os valores e a infraestrutura de ativação imediata, precisamos firmar 3 acordos fundamentais:
+            </p>
+
+            <!-- Garantia Blindada de Dupla Proteção (Bloco 13) -->
+            <div class="guarantee-grid">
+              <div style="border-left: 3px solid #10B981; padding-left: 10px;">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #065F46; text-transform: uppercase;">GARANTIA 1 · EXCELÊNCIA ESTÉTICA</div>
+                <div style="font-size: 0.77rem; color: #334155; line-height: 1.45; margin-top: 4px;">
+                  Se a sua Landing Page não for infinitamente mais sofisticada e profissional que a página do Canva e de qualquer corretor da região, refaço do zero até você dizer <em>"Lucas, ficou perfeito"</em>.
+                </div>
+              </div>
+              <div style="border-left: 3px solid #0284C7; padding-left: 10px;">
+                <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; font-weight: 800; color: #0284C7; text-transform: uppercase;">GARANTIA 2 · ACOMPANHAMENTO REAL</div>
+                <div style="font-size: 0.77rem; color: #334155; line-height: 1.45; margin-top: 4px;">
+                  Acompanhamos as primeiras campanhas lado a lado. Se houver necessidade de ajuste de público, anúncios ou segmentação, alteramos na hora sem cobrar nenhum centavo a mais.
+                </div>
+              </div>
+            </div>
+
+            <div class="pact-box">
+              <div class="pact-checklist">
+                
+                <!-- Acordo 1 (Inicia Desmarcado) -->
+                <div class="pact-item" id="pactItem1" onclick="togglePact(1)">
+                  <div class="pact-checkbox" id="checkIcon1">
+                    <svg class="pact-checkbox-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div class="pact-content">
+                    <div class="pact-content-title">1. Eficácia da Solução</div>
+                    <div class="pact-content-desc">
+                      Você concorda que essa estrutura (Tráfego Pago + Landing Page de Luxo + Filtro Anti-Curioso) resolve definitivamente o gargalo de curiosos e ausência no Google?
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Acordo 2 (Inicia Desmarcado) -->
+                <div class="pact-item" id="pactItem2" onclick="togglePact(2)">
+                  <div class="pact-checkbox" id="checkIcon2">
+                    <svg class="pact-checkbox-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div class="pact-content">
+                    <div class="pact-content-title">2. Prioridade & Urgência</div>
+                    <div class="pact-content-desc">
+                      Resolver esse problema e colocar compradores reais na sua agenda é uma prioridade e urgência absoluta para a sua gestão agora?
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Acordo 3 (Inicia Desmarcado) -->
+                <div class="pact-item" id="pactItem3" onclick="togglePact(3)">
+                  <div class="pact-checkbox" id="checkIcon3">
+                    <svg class="pact-checkbox-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <div class="pact-content">
+                    <div class="pact-content-title">3. Decisão de Início Imediato</div>
+                    <div class="pact-content-desc">
+                      Se as condições de pagamento e investimento couberem confortavelmente no seu caixa e tiverem retorno garantido, você tem o compromisso de iniciarmos a implementação hoje mesmo?
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Botao CTA Black - Destravado Somente Quando os 3 Estiverem Marcados -->
+              <button class="pact-btn-unlock locked" id="pactBtnUnlock" onclick="proceedToPrice()">
+                <span>Marque os 3 Acordos Acima para Destravar a Proposta</span>
+              </button>
+
+              <div style="margin-top: 0.85rem;">
+                <button style="background: none; border: none; font-size: 0.75rem; color: #94A3B8; text-decoration: underline; cursor: pointer;" onclick="showThankYou()">
+                  Tenho dúvidas / Não é o momento agora
+                </button>
+              </div>
+
+              <!-- Mensagem Alternativa Muito Obrigado -->
+              <div class="thankyou-card" id="thankyouBox">
+                <div style="font-size: 1.05rem; font-weight: 800; color: var(--ink-dark); margin-bottom: 6px;">MUITO OBRIGADO PELA SUA TRANSPARÊNCIA, CAMILA!</div>
+                <p style="font-size: 0.82rem; color: var(--ink-secondary); line-height: 1.5; max-width: 520px; margin: 0 auto;">
+                  Compreendemos perfeitamente. Respeitamos o momento da sua carreira. Caso no futuro decida que é a hora de automatizar a triagem e profissionalizar a sua presença digital, estaremos 100% à sua disposição.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+        <!-- SLIDE 13: PREÇO & CONDIÇÃO ESPECIAL FACILITADA -->
+        <section class="deck-slide" data-slide="13">
+          <div style="text-align: center;">
+            <h2 class="proposal-h1" style="margin-bottom: 0.35rem; font-size: 2.1rem; line-height: 1.15;">
+              A DECISÃO COMERCIAL MAIS LUCRATIVA DO SEU ANO
+            </h2>
+            <p class="proposal-desc" style="margin: 0 auto 1.15rem auto; max-width: 700px; font-size: 0.88rem; line-height: 1.45;">
+              Tudo pronto e rodando no seu nome com acompanhamento técnico prioritário e condições claras de investimento:
+            </p>
+
+            <div style="max-width: 660px; margin: 0 auto; background: var(--ink-dark); border-radius: var(--radius-card); padding: 1.5rem 2.2rem; text-align: left; color: #FFFFFF; box-shadow: 0 20px 50px rgba(0,0,0,0.25);">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.85rem;">
+                <div>
+                  <span style="font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-yellow); font-weight: 700;">Setup Completo Chave na Mão</span>
+                  <div style="font-size: 2.5rem; font-weight: 800; color: #FFFFFF; letter-spacing: -0.04em; line-height: 1.1; margin-top: 2px;">
+                    R$ 3.500<span style="font-size: 1.1rem; color: #94A3B8;">,00</span>
+                  </div>
+                  <div style="font-size: 0.78rem; color: var(--accent-yellow); font-weight: 700; margin-top: 3px;">À vista no PIX</div>
+                </div>
+                <div style="text-align: right;">
+                  <span style="font-size: 0.68rem; color: #94A3B8; text-decoration: line-through;">Valor de Mercado</span>
+                  <div style="font-size: 0.92rem; font-weight: 700; color: #E2E8F0;">R$ 12.000,00</div>
+                  <div style="font-size: 0.68rem; color: #10B981; font-weight: 700; margin-top: 2px;">Economia de R$ 8.500</div>
+                </div>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.08); border-radius: var(--radius-sm); padding: 12px 16px; font-size: 0.81rem; line-height: 1.55; color: #F8FAFC; margin-bottom: 0.85rem; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div style="font-weight: 800; color: #FFFFFF; margin-bottom: 4px; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.04em;">Condições Especiais de Pagamento:</div>
+                - <strong>Opção Facilitada:</strong> 4 meses de R$ 1.000,00 por mês (apenas R$ 33/dia para ter o ecossistema completo rodando).<br>
+                - <strong>Plano B Express:</strong> Se você não quiser o sistema completo agora e quiser apenas sair do Canva com a Landing Page de Alta Conversão + Google Meu Negócio verificado, o investimento é de <strong>R$ 1.000,00 no PIX</strong>!
+              </div>
+
+              <div style="border-top: 1px dashed rgba(255,255,255,0.18); padding-top: 0.75rem; font-size: 0.82rem; font-weight: 700; color: var(--accent-yellow); text-align: center;">
+                Uma única venda de condomínio fechado (comissão líquida de R$ 36.000) paga 10 vezes o investimento de todo o sistema.
+              </div>
+            </div>
+
+            <!-- Presente Surpresa Fast-Action (Bloco 17) -->
+            <div style="max-width: 660px; margin: 0 auto;">
+              <div class="fast-action-box">
+                <svg class="icon-svg" style="width: 18px; height: 18px; color: #B45309; flex-shrink: 0; margin-top: 2px;" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                <div style="font-size: 0.79rem; color: #78350F; line-height: 1.45;">
+                  <strong>Presente de Ação Imediata (Start Hoje):</strong> Fechando e dando o start hoje, eu realizo a configuração e rodo o seu <strong>primeiro teste de anúncio pago sem taxa extra de gerenciamento</strong>, impulsionando o seu melhor tour gravado diretamente para os condomínios nobres de Araraquara já no primeiro fim de semana!
+                </div>
+              </div>
+
+              <!-- FAQ Matador de Micro-Objeções (Bloco 19) -->
+              <div class="faq-grid">
+                <div class="faq-card">
+                  <div class="faq-question">
+                    <span style="color: #0284C7;">P:</span> Preciso de muita verba para anúncios?
+                  </div>
+                  <div class="faq-answer">
+                    Não! No tráfego local de Araraquara, com apenas R$ 15 a R$ 20 por dia já cobrimos os bairros nobres e atingimos milhares de pessoas de classe A. Se paga com qualquer fechamento.
+                  </div>
+                </div>
+
+                <div class="faq-card">
+                  <div class="faq-question">
+                    <span style="color: #0284C7;">P:</span> Vou precisar mexer em códigos ou ferramentas?
+                  </div>
+                  <div class="faq-answer">
+                    Zero esforço técnico para você. Eu sou o seu parceiro de bastidores: assumo 100% da infraestrutura, anúncios e automações. Você só atende os clientes qualificados.
+                  </div>
+                </div>
+
+                <div class="faq-card">
+                  <div class="faq-question">
+                    <span style="color: #0284C7;">P:</span> E para atualizar novos imóveis na página?
+                  </div>
+                  <div class="faq-answer">
+                    Super simples. Sempre que você captar um imóvel exclusivo no Damha, basta me mandar as fotos e detalhes no WhatsApp que eu atualizo a vitrine da Landing Page em minutos.
+                  </div>
+                </div>
+
+                <div class="faq-card">
+                  <div class="faq-question">
+                    <span style="color: #0284C7;">P:</span> E se eu não puder os R$ 3.500 agora?
+                  </div>
+                  <div class="faq-answer">
+                    Ativamos o Plano B Express por apenas R$ 1.000 no PIX: construímos a sua Landing Page de Luxo e o Google Meu Negócio para tirar o Canva da bio hoje mesmo!
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- SLIDE 14: PROPOSTA COMERCIAL OFICIAL TIMBRADA & TABELADA (ALTO CONTRASTE) -->
+        <section class="deck-slide" data-slide="14">
+          <h2 class="proposal-h2" style="margin-bottom: 0.35rem;">PROPOSTA COMERCIAL OFICIAL DE PRESTAÇÃO DE SERVIÇOS</h2>
+          <p class="proposal-desc" style="margin-bottom: 1rem;">
+            Documento executivo formalizado contendo quadro de entregáveis, investimentos e cronograma operacional:
+          </p>
+
+          <div class="doc-preview-wrapper">
+            <div class="doc-sheet">
+              
+              <!-- Tabela de Cabecalho / Identificacao das Partes -->
+              <table class="doc-meta-table">
+                <tr>
+                  <td style="width: 55%; border-right: 2px solid #0F172A; background: #F8FAFC;">
+                    <div style="font-size: 0.65rem; font-weight: 800; color: #0284C7; text-transform: uppercase; letter-spacing: 0.05em;">PRESTADOR DE SERVIÇOS</div>
+                    <div style="font-size: 1.05rem; font-weight: 800; color: #0F172A; margin: 2px 0;">Lucas · Estruturação Comercial & Tráfego de Performance</div>
+                    <div style="font-size: 0.72rem; color: #475569;">Assessoria em Vendas & Aquisição de Alto Padrão · Araraquara/SP</div>
+                    <div style="font-size: 0.72rem; color: #0F172A; font-weight: 600; margin-top: 2px;">WhatsApp Direto: (11) 95762-2191</div>
+                  </td>
+                  <td style="width: 45%;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+                      <span style="font-size: 0.68rem; font-weight: 800; color: #64748B;">PROPOSTA Nº:</span>
+                      <strong style="font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #0F172A;">2026-CM01</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+                      <span style="font-size: 0.68rem; font-weight: 800; color: #64748B;">DATA DE EMISSÃO:</span>
+                      <span style="font-size: 0.72rem; color: #0F172A;">13 de Novembro de 2026</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 3px;">
+                      <span style="font-size: 0.68rem; font-weight: 800; color: #64748B;">VALIDADE:</span>
+                      <span style="font-size: 0.72rem; color: #10B981; font-weight: 700;">7 dias úteis</span>
+                    </div>
+                    <div style="border-top: 1px dashed #CBD5E1; padding-top: 4px; margin-top: 4px;">
+                      <div style="font-size: 0.65rem; font-weight: 800; color: #64748B;">CONTRATANTE:</div>
+                      <strong style="font-size: 0.78rem; color: #0F172A;">Camila Moraes</strong> <span style="font-size: 0.7rem; color: #475569;">(CRECI/SP 291388-F)</span>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Secao 1: Objeto -->
+              <div class="doc-section-h3">1. OBJETO DA PROPOSTA</div>
+              <p style="font-size: 0.78rem; color: #334155; line-height: 1.55; margin-bottom: 0.85rem;">
+                A presente proposta estabelece os termos para a criação, implantação técnica, gestão e operação do <strong>Sistema Comercial de Alta Conversão</strong> da corretora <strong>Camila Moraes</strong>, voltado exclusivamente para a prospecção ativa de compradores e proprietários de condomínios fechados de alto padrão em Araraquara/SP (com ênfase no Parque Residencial Damha I, Damha II, Buona Vita e residenciais nobres correlatos).
+              </p>
+
+              <!-- Secao 2: Escopo Completo dos Entregaveis Tabelado -->
+              <div class="doc-section-h3">2. QUADRO DETALHADO DE ENTREGÁVEIS (SETUP CHAVE NA MÃO)</div>
+              
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th style="width: 24%;">Pilar Operacional</th>
+                    <th style="width: 44%;">Entregáveis Contratados</th>
+                    <th style="width: 32%;">Especificações Técnicas & Padrão</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong style="color: #0284C7; font-size: 0.8rem;">PILAR 01</strong><br>
+                      <strong style="color: #0F172A;">Atração Qualificada & Tráfego Pago</strong>
+                    </td>
+                    <td>
+                      • <strong>Google Meu Negócio:</strong> Perfil otimizado e verificado para buscas locais de alto padrão.<br>
+                      • <strong>Google Ads (Rede de Pesquisa):</strong> Campanhas para termos de intenção de compra ("casa Damha Araraquara", "Buona Vita").<br>
+                      • <strong>Meta Ads (Instagram & Facebook):</strong> Anúncios geolocalizados para público de alta renda.<br>
+                      • <strong>Distribuição Paga de Vídeos:</strong> Impulsionamento estratégico dos tours com videomaker e drone.
+                    </td>
+                    <td>
+                      Posicionamento na 1ª página do Google Maps. Segmentação cirúrgica no raio nobre de Araraquara focando exclusivamente em médicos, empresários, produtores rurais e investidores patrimoniais.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #10B981; font-size: 0.8rem;">PILAR 02</strong><br>
+                      <strong style="color: #0F172A;">Vendas & Conversão (Landing Page)</strong>
+                    </td>
+                    <td>
+                      • <strong>Landing Page Exclusiva:</strong> Site profissional responsivo e ultra-rápido substituindo o Canva.<br>
+                      • <strong>Domínio Próprio & SSL:</strong> Endereço oficial (ex: camilamoraesimoveis.com.br).<br>
+                      • <strong>Cópia Persuasiva & Storytelling:</strong> Narrativa sensorial de curadoria e estilo de vida.<br>
+                      • <strong>Vitrine Categorizada:</strong> Imóveis com fotos HD e fichas claras.<br>
+                      • <strong>Filtro Anti-Curioso:</strong> Triagem de recursos no WhatsApp.
+                    </td>
+                    <td>
+                      Carregamento instantâneo em menos de 1,2 segundos. Cópia estruturada nos princípios de Eugene Schwartz e Dan Kennedy. Triagem ativa de crédito e forma de pagamento antes de agendar visitas.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #8B5CF6; font-size: 0.8rem;">PILAR 03</strong><br>
+                      <strong style="color: #0F172A;">Pós-Venda, LTV & Acompanhamento</strong>
+                    </td>
+                    <td>
+                      • <strong>CRM em Pipeline Kanban:</strong> Gestão visual de propostas em mesa e contratos.<br>
+                      • <strong>Canal para Proprietários:</strong> Captação confidencial de novos imóveis exclusivos.<br>
+                      • <strong>Guia de Roteiros Magnéticos:</strong> Estrutura de gravação para tours em vídeo.<br>
+                      • <strong>Acompanhamento de 60 Dias:</strong> Suporte direto com o Lucas.
+                    </td>
+                    <td>
+                      Reuniões quinzenais de alinhamento estratégico, relatórios claros de métricas (CPL, visitas agendadas, propostas) e otimização contínua de taxas de fechamento.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Secao 3: Quadro de Investimento Tabelado -->
+              <div class="doc-section-h3">3. QUADRO DE INVESTIMENTO & FORMAS DE PAGAMENTO</div>
+              
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th style="width: 28%;">Modalidade Contratual</th>
+                    <th style="width: 44%;">Escopo & Benefícios Inclusos</th>
+                    <th style="width: 28%;">Condição Financeira</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="highlight-row">
+                    <td>
+                      <strong style="color: #0F172A; font-size: 0.82rem;">Opção 1 · Setup Chave na Mão</strong><br>
+                      <span class="badge-recommended">Recomendado</span>
+                    </td>
+                    <td>
+                      Implantação completa dos 3 pilares: Tráfego Google + Meta Ads + Landing Page de Alta Conversão + Filtro WhatsApp + CRM Kanban + 60 dias de acompanhamento direto.
+                    </td>
+                    <td>
+                      <strong style="font-size: 1.15rem; color: #0F172A;">R$ 3.500,00</strong><br>
+                      <span style="font-size: 0.72rem; color: #10B981; font-weight: 700;">À vista no PIX</span><br>
+                      <span style="font-size: 0.68rem; color: #64748B;">Prioridade máxima de início</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #0F172A; font-size: 0.82rem;">Opção 2 · Parcelamento Facilitado</strong>
+                    </td>
+                    <td>
+                      Implantação completa de todo o sistema com parcelamento diluído confortavelmente no caixa mensal da corretora.
+                    </td>
+                    <td>
+                      <strong style="font-size: 1.05rem; color: #0F172A;">4x de R$ 1.000,00</strong><br>
+                      <span style="font-size: 0.72rem; color: #64748B;">mensais (apenas R$ 33/dia)</span><br>
+                      <span style="font-size: 0.68rem; color: #8B5CF6; font-weight: 600;">Total facilitado: R$ 4.000,00</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong style="color: #0F172A; font-size: 0.82rem;">Opção 3 · Plano B Express</strong><br>
+                      <span style="font-size: 0.68rem; color: #0284C7; font-weight: 700;">Contingência</span>
+                    </td>
+                    <td>
+                      Caso opte por iniciar de forma enxuta sem o sistema completo: Desenvolvimento da Landing Page de Luxo + Otimização do Google Meu Negócio.
+                    </td>
+                    <td>
+                      <strong style="font-size: 1.05rem; color: #0F172A;">R$ 1.000,00</strong><br>
+                      <span style="font-size: 0.72rem; color: #0284C7; font-weight: 700;">À vista no PIX</span><br>
+                      <span style="font-size: 0.66rem; color: #64748B;">*100% de crédito revertido na contratação futura de tráfego</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Secao 4: Cronograma Operacional Tabelado -->
+              <div class="doc-section-h3">4. CRONOGRAMA DE ATIVAÇÃO & PRAZOS OPERACIONAIS (SLA)</div>
+              
+              <table class="doc-table">
+                <thead>
+                  <tr>
+                    <th style="width: 18%;">Prazo</th>
+                    <th style="width: 38%;">Fase Operacional</th>
+                    <th style="width: 44%;">Entregável Técnico Validado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color: #0284C7;">Semana 01</strong></td>
+                    <td><strong>Setup de Infraestrutura & Conversão</strong></td>
+                    <td>Criação da Landing Page de alta velocidade, domínio oficial ativo, redação da cópia persuasiva e perfil Google Meu Negócio verificado.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: #10B981;">Semana 02</strong></td>
+                    <td><strong>Ativação do Tráfego & Triagem</strong></td>
+                    <td>Campanhas ativas e aprovadas no Google Ads e Meta Ads + Filtro Anti-Curioso estruturado e respondendo no WhatsApp.</td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: #8B5CF6;">Semana 03+</strong></td>
+                    <td><strong>Visitas VIP & Fechamento de Vendas</strong></td>
+                    <td>Entrada contínua de compradores qualificados na agenda, atendimentos presenciais no Damha e Buona Vita e otimização semanal.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Secao 5: Termo de Aceite & Assinaturas Tabelado -->
+              <div class="doc-section-h3">5. TERMO DE ACEITE & ASSINATURA DAS PARTES</div>
+              
+              <table class="doc-table" style="margin-bottom: 1.25rem;">
+                <tr>
+                  <td style="width: 50%; padding: 14px; background: #F8FAFC;">
+                    <div style="font-size: 0.68rem; font-weight: 800; color: #64748B; text-transform: uppercase;">CONTRATADO:</div>
+                    <div style="font-size: 0.95rem; font-weight: 800; color: #0F172A; margin: 4px 0;">Lucas</div>
+                    <div style="font-size: 0.72rem; color: #475569;">Especialista em Estruturação Comercial & Gestão de Performance</div>
+                    <div style="font-size: 0.68rem; color: #10B981; font-weight: 700; margin-top: 4px;">Assinado digitalmente em 13/11/2026</div>
+                  </td>
+                  <td style="width: 50%; padding: 14px; background: #F8FAFC;">
+                    <div style="font-size: 0.68rem; font-weight: 800; color: #64748B; text-transform: uppercase;">CONTRATANTE:</div>
+                    <div style="font-size: 0.95rem; font-weight: 800; color: #0F172A; margin: 4px 0;">Camila Moraes</div>
+                    <div style="font-size: 0.72rem; color: #475569;">Corretora Especialista em Alto Padrão (CRECI/SP 291388-F)</div>
+                    <div style="font-size: 0.68rem; color: #0284C7; font-weight: 700; margin-top: 4px;">Termo de Aceite via Confirmação Eletrônica</div>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Botao de Acao Oficial -->
+              <div style="text-align: center; margin-top: 1rem;">
+                <a href="https://wa.me/5511957622191?text=Oi%20Lucas!%20Li%20a%20proposta%20comercial%20completa%20e%20quero%20iniciar%20a%20ativa%C3%A7%C3%A3o!" target="_blank" style="background: #0F172A; color: #FFFFFF; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-size: 0.88rem; font-weight: 800; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 4px 16px rgba(15, 23, 42, 0.25); text-transform: uppercase; letter-spacing: 0.02em;">
+                  <span>Aceitar Proposta Comercial & Iniciar pelo WhatsApp</span>
+                  <svg class="icon-svg" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. macOS DOCK FLUTUANTE -->
+  <div class="mac-dock-container">
+    <nav class="mac-dock">
+      <button class="dock-btn" id="dockPrev" title="Slide Anterior" disabled>
+        <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <span>Anterior</span>
+      </button>
+
+      <div class="dock-sep"></div>
+
+      <div class="dock-slide-indicator" id="dockSlideIndicator">01 / 14</div>
+
+      <div class="dock-sep"></div>
+
+      <button class="dock-btn dock-btn-primary" id="dockNext" title="Próximo Slide">
+        <span>Próximo</span>
+        <svg class="icon-svg" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    /* ============================================================
+       1. CONTROLE DE SLIDES & DOCK
+    ============================================================ */
+    const slides = document.querySelectorAll('.deck-slide');
+    const total = slides.length;
+    let current = 0;
+
+    const dockSlideIndicator = document.getElementById('dockSlideIndicator');
+    const dockPrev = document.getElementById('dockPrev');
+    const dockNext = document.getElementById('dockNext');
+    const macClock = document.getElementById('macClock');
+
+    // Formato 24 horas no relógio do macOS
+    function updateClock() {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      macClock.textContent = hours + ':' + minutes;
+    }
+    updateClock();
+    setInterval(updateClock, 10000);
+
+    function goToSlide(index) {
+      if (index < 0 || index >= total) return;
+      slides[current].classList.remove('active');
+      current = index;
+      slides[current].classList.add('active');
+
+      const formattedNum = String(current + 1).padStart(2, '0');
+      dockSlideIndicator.textContent = formattedNum + ' / ' + String(total).padStart(2, '0');
+
+      dockPrev.disabled = current === 0;
+
+      // Se for o Slide 12 (indice 11 - O Pacto), OCULTA o botao Proximo do dock
+      // A única forma de avançar é pelo botão CTA Black embaixo do checklist!
+      if (current === 11) {
+        dockNext.style.display = 'none';
+      } else {
+        dockNext.style.display = 'flex';
+        if (current === total - 1) {
+          dockNext.innerHTML = '<span>Concluir</span><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+          dockNext.title = 'Finalizar Apresentação';
+        } else {
+          dockNext.innerHTML = '<span>Próximo</span><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+          dockNext.title = 'Próximo Slide';
+        }
+      }
+
+      // Se for o slide do mapa mental (indice 5), desenha as linhas SVG
+      if (current === 5) {
+        setTimeout(drawMindmapLinesLight, 60);
+        setTimeout(drawMindmapLinesLight, 250);
+      }
+    }
+
+    dockPrev.addEventListener('click', () => goToSlide(current - 1));
+    dockNext.addEventListener('click', () => {
+      // Bloqueia avanco pelo dock se estiver no Slide 12
+      if (current === 11) return;
+      if (current < total - 1) goToSlide(current + 1);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        // Bloqueia avanco por teclado se estiver no Slide 12
+        if (current === 11) return;
+        if (current < total - 1) goToSlide(current + 1);
+      }
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        goToSlide(current - 1);
+      }
+    });
+
+    /* ============================================================
+       2. MAPA MENTAL DINAMICO (TEMA CLARO) COM LINHAS SVG REAIS
+    ============================================================ */
+    function toggleMindNodeLight(pKey) {
+      const idx = pKey.replace('p', '');
+      const node = document.getElementById('pillarLight' + idx);
+      const children = document.getElementById('childrenLight_' + pKey);
+      node.classList.toggle('expanded');
+      children.classList.toggle('open');
+      drawMindmapLinesLight();
+      setTimeout(drawMindmapLinesLight, 150);
+    }
+
+    function expandAllMindmapLight() {
+      ['p1', 'p2', 'p3'].forEach(k => {
+        const idx = k.replace('p', '');
+        const node = document.getElementById('pillarLight' + idx);
+        const children = document.getElementById('childrenLight_' + k);
+        node.classList.add('expanded');
+        children.classList.add('open');
+      });
+      drawMindmapLinesLight();
+      setTimeout(drawMindmapLinesLight, 150);
+    }
+
+    function collapseAllMindmapLight() {
+      ['p1', 'p2', 'p3'].forEach(k => {
+        const idx = k.replace('p', '');
+        const node = document.getElementById('pillarLight' + idx);
+        const children = document.getElementById('childrenLight_' + k);
+        node.classList.remove('expanded');
+        children.classList.remove('open');
+      });
+      drawMindmapLinesLight();
+      setTimeout(drawMindmapLinesLight, 150);
+    }
+
+    function drawMindmapLinesLight() {
+      const svg = document.getElementById('mindmapSvgLight');
+      const canvas = document.getElementById('mindmapCanvasLight');
+      const root = document.getElementById('mmRootLight');
+      if (!svg || !canvas || !root) return;
+
+      const canvasRect = canvas.getBoundingClientRect();
+      svg.setAttribute('width', canvasRect.width);
+      svg.setAttribute('height', canvasRect.height);
+      svg.setAttribute('viewBox', '0 0 ' + canvasRect.width + ' ' + canvasRect.height);
+      svg.innerHTML = '';
+
+      const rootRect = root.getBoundingClientRect();
+      const xRoot = rootRect.right - canvasRect.left;
+      const yRoot = rootRect.top + rootRect.height / 2 - canvasRect.top;
+
+      const pillars = ['p1', 'p2', 'p3'];
+      const colors = ['#0284C7', '#10B981', '#8B5CF6'];
+
+      pillars.forEach((key, idx) => {
+        const pillarEl = document.getElementById('pillarLight' + (idx + 1));
+        if (!pillarEl) return;
+        const pRect = pillarEl.getBoundingClientRect();
+        const xPillarLeft = pRect.left - canvasRect.left;
+        const yPillar = pRect.top + pRect.height / 2 - canvasRect.top;
+        const xPillarRight = pRect.right - canvasRect.left;
+
+        const color = colors[idx];
+
+        // Curva Bezier Raiz -> Pilar
+        const pathRootToPillar = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const cx1 = xRoot + (xPillarLeft - xRoot) * 0.5;
+        const cx2 = xPillarLeft - (xPillarLeft - xRoot) * 0.5;
+        pathRootToPillar.setAttribute('d', 'M ' + xRoot + ' ' + yRoot + ' C ' + cx1 + ' ' + yRoot + ', ' + cx2 + ' ' + yPillar + ', ' + xPillarLeft + ' ' + yPillar);
+        pathRootToPillar.setAttribute('fill', 'none');
+        pathRootToPillar.setAttribute('stroke', color);
+        pathRootToPillar.setAttribute('stroke-width', '2.5');
+        svg.appendChild(pathRootToPillar);
+
+        // Se estiver aberto, desenha linhas Pilar -> Sub-nos
+        const childrenCol = document.getElementById('childrenLight_' + key);
+        if (childrenCol && childrenCol.classList.contains('open')) {
+          const leaves = childrenCol.querySelectorAll('.mm-leaf-node-light');
+          leaves.forEach(leaf => {
+            const lRect = leaf.getBoundingClientRect();
+            const xLeaf = lRect.left - canvasRect.left;
+            const yLeaf = lRect.top + lRect.height / 2 - canvasRect.top;
+
+            const pathPillarToLeaf = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            const clx1 = xPillarRight + (xLeaf - xPillarRight) * 0.5;
+            const clx2 = xLeaf - (xLeaf - xPillarRight) * 0.5;
+            pathPillarToLeaf.setAttribute('d', 'M ' + xPillarRight + ' ' + yPillar + ' C ' + clx1 + ' ' + yPillar + ', ' + clx2 + ' ' + yLeaf + ', ' + xLeaf + ' ' + yLeaf);
+            pathPillarToLeaf.setAttribute('fill', 'none');
+            pathPillarToLeaf.setAttribute('stroke', color);
+            pathPillarToLeaf.setAttribute('stroke-width', '1.8');
+            pathPillarToLeaf.setAttribute('stroke-dasharray', '3,3');
+            svg.appendChild(pathPillarToLeaf);
+          });
+        }
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      if (current === 5) drawMindmapLinesLight();
+    });
+
+    /* ============================================================
+       3. WHATSAPP INTERATIVO: 3 PERFIS COM SCROLL TOTAL
+    ============================================================ */
+    const waChatData = {
+      eduardo: {
+        name: "Dr. Eduardo Mendes",
+        initials: "EM",
+        avatarBg: "#DBEAFE",
+        avatarColor: "#1E40AF",
+        status: "online agora - qualificado",
+        messages: [
+          { sender: "client", time: "10:12", text: "Olá Camila, bom dia! Tudo bem?" },
+          { sender: "client", time: "10:12", text: "Vi o tour daquela casa térrea no Damha I no seu site." },
+          { sender: "client", time: "10:13", text: "A casa ainda está disponível? Sou médico aqui em Araraquara e estou procurando algo pronto para mudar." },
+          { sender: "camila", time: "10:13", text: "Olá, Dr. Eduardo! Bom dia, tudo ótimo por aqui!" },
+          { sender: "camila", time: "10:14", text: "Aqui é a Camila Moraes. Essa casa no Damha I está disponível sim, é um projeto de 4 suítes com acabamento contemporâneo." },
+          { sender: "camila", time: "10:14", text: "O senhor procura para mudança imediata nos próximos meses ou está avaliando com calma?" },
+          { sender: "client", time: "10:15", text: "Minha intenção é mudar no máximo até o início do próximo semestre. Já vendemos nosso imóvel anterior." },
+          { sender: "camila", time: "10:16", text: "Excelente! Nesse caso a documentação dessa residência está 100% desembaraçada para escritura imediata." },
+          { sender: "camila", time: "10:16", text: "A aquisição seria através de recursos próprios ou financiamento bancário?" },
+          { sender: "client", time: "10:17", text: "Entrada em recursos próprios e o saldo com carta de crédito do Santander que já está pré-aprovada." },
+          { sender: "camila", time: "10:17", text: "Perfeito, Dr. Eduardo. As condições são ideais para o proprietário." },
+          { sender: "camila", time: "10:18", text: "Consigo agendar uma apresentação privativa para o senhor e sua família nesta quinta-feira às 17h, com o pôr do sol na área gourmet. Fica bom para a sua agenda?" },
+          { sender: "client", time: "10:18", text: "Perfeito, quinta às 17h no Damha! Vou com a minha esposa." },
+          { sender: "camila", time: "10:19", text: "Combinadíssimo! Já vou deixar a portaria do condomínio avisada para a sua liberação VIP. Até quinta!" }
+        ]
+      },
+      marcelo: {
+        name: "Marcelo Silveira (Agro)",
+        initials: "MS",
+        avatarBg: "#FEF3C7",
+        avatarColor: "#92400E",
+        status: "online agora - permuta",
+        messages: [
+          { sender: "client", time: "09:38", text: "Bom dia Camila, vi aquele sobrado no condomínio Buona Vita." },
+          { sender: "client", time: "09:39", text: "O proprietário estuda aceitar um apartamento no centro de Araraquara como parte de pagamento?" },
+          { sender: "camila", time: "09:40", text: "Bom dia, Marcelo! Tudo bem com você?" },
+          { sender: "camila", time: "09:40", text: "O proprietário analisa permuta sim, desde que seja de menor valor (até 30% do imóvel) e com liquidez em Araraquara." },
+          { sender: "camila", time: "09:41", text: "Qual é o condomínio e metragem do seu apartamento no centro?" },
+          { sender: "client", time: "09:41", text: "É um apartamento de 140m², 3 suítes, condomínio fechado tradicional, avaliado em 650 mil sem nenhuma pendência." },
+          { sender: "camila", time: "09:42", text: "Excelente perfil de permuta, Marcelo. Essa faixa tem boa aceitação na nossa carteira." },
+          { sender: "camila", time: "09:42", text: "E o saldo restante do sobrado seria à vista ou financiamento?" },
+          { sender: "client", time: "09:43", text: "O saldo é à vista na assinatura do contrato." },
+          { sender: "camila", time: "09:43", text: "Perfeito! Já vou enviar a ficha técnica do seu apartamento para pré-alinhamento com o dono do sobrado e te ligo em 15 minutos para agendarmos a visita no Buona Vita." },
+          { sender: "client", time: "09:44", text: "Combinado Camila, fico no aguardo da sua ligação." }
+        ]
+      },
+      curioso: {
+        name: "Curioso Sem Perfil",
+        initials: "CR",
+        avatarBg: "#FEE2E2",
+        avatarColor: "#991B1B",
+        status: "visto por último ontem",
+        messages: [
+          { sender: "client", time: "16:40", text: "preço?" },
+          { sender: "camila", time: "16:41", text: "Olá! Tudo bem? Essa residência de alto padrão no Damha está com valor de R$ 2.450.000." },
+          { sender: "client", time: "16:42", text: "nossa achei que era 400 mil... faz por 1 milhão? dou um celta usado e um terreno irregular no interior do Paraná como entrada..." },
+          { sender: "camila", time: "16:43", text: "Entendo! Esse imóvel possui padrão de condomínio fechado classe A, com regras específicas de aquisição definidas pelo proprietário." },
+          { sender: "camila", time: "16:44", text: "Vou guardar o seu contato aqui e, assim que tivermos oportunidades em loteamentos abertos ou terrenos na sua faixa de orçamento, te aviso por aqui. Um abraço!" },
+          { sender: "client", time: "16:45", text: "valeu" }
+        ]
+      }
+    };
+
+    function renderWaMessages(chatKey) {
+      const chat = waChatData[chatKey];
+      const box = document.getElementById('waMessagesBox');
+      const avatar = document.getElementById('waHeaderAvatar');
+      const name = document.getElementById('waHeaderName');
+      const status = document.getElementById('waHeaderStatus');
+
+      avatar.textContent = chat.initials;
+      avatar.style.background = chat.avatarBg;
+      avatar.style.color = chat.avatarColor;
+      name.textContent = chat.name;
+      status.textContent = chat.status;
+
+      box.innerHTML = '';
+      chat.messages.forEach(msg => {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'wa-msg wa-msg--' + msg.sender;
+        const checkSvg = msg.sender === 'camila' 
+          ? '<svg class="wa-check-svg" viewBox="0 0 16 11"><path d="M1 5.5L5.5 10L15 1M6 5.5L10.5 10L15 1"/></svg>' 
+          : '';
+        msgDiv.innerHTML = msg.text + '<div class="wa-msg-meta">' + msg.time + checkSvg + '</div>';
+        box.appendChild(msgDiv);
+      });
+      // Inicia no topo para permitir a leitura cronológica completa de cima para baixo
+      box.scrollTop = 0;
+    }
+
+    function switchWaChat(chatKey) {
+      document.querySelectorAll('.wa-chat-item').forEach(el => el.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+      renderWaMessages(chatKey);
+    }
+
+    // Inicializa chat no primeiro contato
+    renderWaMessages('eduardo');
+
+    /* ============================================================
+       4. O PACTO DE COMPROMETIMENTO (TUDO DESMARCADO INICIALMENTE)
+    ============================================================ */
+    const pactState = { 1: false, 2: false, 3: false };
+
+    function togglePact(num) {
+      pactState[num] = !pactState[num];
+      const item = document.getElementById('pactItem' + num);
+      item.classList.toggle('checked');
+
+      const allChecked = pactState[1] && pactState[2] && pactState[3];
+      const btn = document.getElementById('pactBtnUnlock');
+
+      if (allChecked) {
+        btn.classList.remove('locked');
+        btn.classList.add('active');
+        btn.innerHTML = '<span>Sim, quero destravar minha operação e conhecer a proposta comercial</span><svg class="icon-svg" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+      } else {
+        btn.classList.remove('active');
+        btn.classList.add('locked');
+        btn.innerHTML = '<span>Marque os 3 Acordos Acima para Destravar a Proposta</span>';
+      }
+    }
+
+    function proceedToPrice() {
+      const allChecked = pactState[1] && pactState[2] && pactState[3];
+      if (allChecked) {
+        goToSlide(12); // Leva ao Slide 13 (indice 12)
+      }
+    }
+
+    function showThankYou() {
+      const box = document.getElementById('thankyouBox');
+      box.style.display = 'block';
+      box.scrollIntoView({ behavior: 'smooth' });
+    }
+  
+    /* ============================================================
+       6. SUPORTE TOUCH & SWIPE PARA MOBILE
+    ============================================================ */
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const macWindow = document.querySelector('.mac-window');
+
+    if (macWindow) {
+      macWindow.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        touchStartY = e.changedTouches[0].screenY;
+      }, { passive: true });
+
+      macWindow.addEventListener('touchend', (e) => {
+        const diffX = e.changedTouches[0].screenX - touchStartX;
+        const diffY = e.changedTouches[0].screenY - touchStartY;
+
+        // Deslize horizontal detectado (minimo 50px de deslocamento horizontal)
+        if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+          if (diffX < 0) {
+            // Deslize para esquerda (proximo slide)
+            if (current === 11) return; // Bloqueado no Slide 12 ate assinar pacto
+            if (current < total - 1) goToSlide(current + 1);
+          } else {
+            // Deslize para direita (slide anterior)
+            if (current > 0) goToSlide(current - 1);
+          }
+        }
+      }, { passive: true });
+    }
+  </script>
+</body>
+</html>
